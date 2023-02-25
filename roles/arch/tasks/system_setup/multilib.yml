@@ -1,0 +1,11 @@
+- name: Enable Multilib
+  lineinfile:
+    path: "/etc/pacman.conf"
+    regexp: " {{ item.regexp }} #Include = /etc/pacman.d/mirrorlist"
+    line: " {{ item.line }}Include = /etc/pacman.d/mirrorlist"
+  loop:
+    - {
+        regexp: "^#Include = /etc/pacman.d/mirrorlist",
+        line: "Include = /etc/pacman.d/mirrorlist",
+      }
+    - { regexp: "^#[multilib]", line: "[multilib]" }
