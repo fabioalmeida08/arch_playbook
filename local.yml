@@ -1,0 +1,35 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: pre-run | check requirements
+      tags: always
+      package:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - python-psutil
+        - python-pip
+      
+    - name: Install github module
+      ansible.builtin.pip:
+        name: github3.py
+
+- hosts: localhost
+  tags: arch
+  become: true
+  vars:
+    home: "/home/{{ ansible_env.SUDO_USER }}"
+    user: "{{ ansible_env.SUDO_USER }}"
+    ipaddr: "{{ ansible_default_ipv4.address }}"
+  vars_prompt:
+    - name: git_username
+      prompt: git config username
+      private: false
+
+    - name: git_email
+      prompt: git config email
+      private: false
+  roles:
+    - arch
