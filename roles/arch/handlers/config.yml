@@ -1,0 +1,16 @@
+- name: config autostart desktopfile
+  tags: desktop file, config, script, autostart
+  lineinfile:
+    path: "{{ home }}/.config/autostart/modmap.desktop"
+    regexp: "^Exec"
+    line: "Exec={{ home }}/.scripts/modmap.sh"
+
+- name: setup git config
+  tags: gitconfig, config,
+  lineinfile:
+    path: "{{ home }}/.gitconfig"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - { regexp: "^name", line: "name = {{ git_username }}" }
+    - { regexp: "^email", line: "email = {{ git_email }}" }
