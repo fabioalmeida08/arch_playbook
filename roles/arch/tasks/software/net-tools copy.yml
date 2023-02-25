@@ -1,0 +1,5 @@
+- name: software | net-tools | install package
+  tags: net-tools, packages, workstation-packages
+  package:
+    name: net-tools
+    state: latest

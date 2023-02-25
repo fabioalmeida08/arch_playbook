@@ -1,0 +1,5 @@
+- name: software | vim | install package
+  tags: vim, packages, workstation-packages
+  package:
+    name: vim
+    state: latest

@@ -1,0 +1,10 @@
+- name: software | steam | install package
+  tags: steam, packages, workstation-packages
+  package:
+    name: steam
+    state: latest
+  notify: "{{ item }}"
+  loop:
+    - create the dir for eg-proton
+    - get proton-ge latest tag
+    - install proton ge
