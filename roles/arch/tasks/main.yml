@@ -1,0 +1,18 @@
+- import_tasks: system_setup/main.yml
+- import_tasks: dotfiles/main.yml
+
+- import_tasks: software/bashtop.yml
+- import_tasks: software/bat.yml
+- import_tasks: software/flameshot.yml
+- import_tasks: software/fonts.yml
+- import_tasks: software/git.yml
+- import_tasks: software/kitty.yml
+- import_tasks: software/mpv.yml
+- import_tasks: software/net-tools.yml
+- import_tasks: software/oh-my-zsh.yml
+- import_tasks: software/prometheus-node-exporter.yml
+- import_tasks: software/prometheus.yml
+- import_tasks: software/pavucontrol.yml
+- import_tasks: software/qbittorrent.yml
+- import_tasks: software/steam.yml
+- import_tasks: software/vim.yml
