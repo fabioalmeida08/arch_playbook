@@ -1,6 +1,7 @@
 - import_tasks: system_setup/main.yml
 - import_tasks: dotfiles/main.yml
 
+- import_tasks: software/zsh.yml
 - import_tasks: software/bashtop.yml
 - import_tasks: software/bat.yml
 - import_tasks: software/flameshot.yml
