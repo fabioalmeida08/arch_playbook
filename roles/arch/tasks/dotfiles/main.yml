@@ -1,0 +1,31 @@
+- name: Retrieve Dotfiles
+  tags: git, dotfiles, config
+  git:
+    repo: "https://github.com/fabioalmeida08/dotfiles"
+    dest: "{{ home }}/.dotfiles"
+
+- name: Place dotfiles on right dirs
+  tags: git, dotfiles, config
+  copy:
+    src: "{{ home }}/.dotfiles/{{ item.file_name }}"
+    dest: "{{ item.dest }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0664
+  with_items:
+    - { file_name: ".gitconfig", dest: "{{ home }}" }
+    - { file_name: ".scripts", dest: "{{ home }}" }
+    - { file_name: "kitty", dest: "{{ home }}/.config/" }
+    - { file_name: ".p10k.zsh", dest: "{{ home }}" }
+    - { file_name: ".vimrc", dest: "{{ home }}" }
+  notify: setup git config
+
+- name: Setup desktop file on autostart dir
+  tags: desktop file, config, script, autostart
+  copy:
+    src: "{{ home }}/.scripts/modmap.desktop"
+    dest: "{{ home }}/.config/autostart/"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0764
+  notify: config autostart desktopfile
