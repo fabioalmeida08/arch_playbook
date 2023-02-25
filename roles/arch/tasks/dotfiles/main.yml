@@ -18,6 +18,9 @@
     - { file_name: "kitty", dest: "{{ home }}/.config/" }
     - { file_name: ".p10k.zsh", dest: "{{ home }}" }
     - { file_name: ".vimrc", dest: "{{ home }}" }
+    - { file_name: "bspwm", dest: "{{ home }}/.config" }
+    - { file_name: "sxhkd", dest: "{{ home }}/.config" }
+    - { file_name: "polybar", dest: "{{ home }}/.config" }
   notify: setup git config
 
 - name: Setup desktop file on autostart dir
