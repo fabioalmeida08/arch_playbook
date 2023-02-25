@@ -1,7 +1,7 @@
 - name: Font Meslo Nerd Font P10k
   tags: fonts, meslo
   package:
-    name: ttf-meslo-nerd-font-powerlevel10k
+    name: ttf-meslo-nerd
     state: latest
 
 - name: Font Fire code Nerd Font
