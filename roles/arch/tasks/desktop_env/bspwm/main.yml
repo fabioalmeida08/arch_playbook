@@ -1,0 +1,16 @@
+- name: desktop env | bat | install package
+  tags: desktop env
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - bspwm
+    - sxhkd
+    - nitrogen
+    - picom
+    - sddm
+    - rofi
+    - polybar
+    - xorg
+    - arandr
+    - dmenu
