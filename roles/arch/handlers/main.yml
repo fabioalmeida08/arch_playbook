@@ -2,3 +2,4 @@
 - import_tasks: zsh.yml
 - import_tasks: steam.yml
 - import_tasks: prometheus.yml
+- import_tasks: bspwm.yml
