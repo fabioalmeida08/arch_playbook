@@ -1,4 +1,4 @@
-- name: desktop env | bspwm | install package
+- name: desktop env | bspwm | 
   tags: desktop env
   package:
     name: "{{ item }}"
@@ -19,4 +19,4 @@
     - lxappearance
   notify:
     - give execute permission to files
-    - add desk env
+    - add qt5ct desk env
