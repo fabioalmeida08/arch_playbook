@@ -1,11 +1,9 @@
-- name: Font Meslo Nerd Font P10k
+- name: fonts
   tags: fonts, meslo
   package:
-    name: ttf-meslo-nerd
+    name: "{{ item }}"
     state: latest
-
-- name: Font Fire code Nerd Font
-  tags: fonts, fira code
-  package:
-    name: ttf-firacode-nerd
-    state: latest
+  loop:
+    - ttf-meslo-nerd
+    - ttf-firacode-nerd
+    - ttf-ioseveka-nerd
