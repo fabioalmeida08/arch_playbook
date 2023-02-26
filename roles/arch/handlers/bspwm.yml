@@ -8,7 +8,7 @@
     - "{{ home }}/.config/bspwm/bspwmrc"
     - "{{ home }}/.config/polybar/launch.sh"
 
-- name: add desk env
+- name: add qt5ct desk env
   lineinfile:
     path: "/etc/environment"
     line: 'QT_QPA_PLATFORMTHEME="qt5ct"'
