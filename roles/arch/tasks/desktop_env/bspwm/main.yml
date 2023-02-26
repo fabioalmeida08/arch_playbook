@@ -1,4 +1,4 @@
-- name: desktop env | bat | install package
+- name: desktop env | bspwm | install package
   tags: desktop env
   package:
     name: "{{ item }}"
@@ -14,3 +14,9 @@
     - xorg
     - arandr
     - dmenu
+    - qt5ct
+    - qt6ct
+    - lxappearance
+  notify:
+    - give execute permission to files
+    - add desk env
