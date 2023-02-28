@@ -3,10 +3,11 @@
     path: "{{ item }}"
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: "0555"
+    mode: "0755"
   loop:
     - "{{ home }}/.config/bspwm/bspwmrc"
     - "{{ home }}/.config/polybar/launch.sh"
+    - "{{ home }}/.config/polybar/scripts/updates.sh"
 
 - name: add qt5ct desk env
   lineinfile:
