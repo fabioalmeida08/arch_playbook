@@ -21,6 +21,7 @@
     - { file_name: "bspwm", dest: "{{ home }}/.config" }
     - { file_name: "sxhkd", dest: "{{ home }}/.config" }
     - { file_name: "polybar", dest: "{{ home }}/.config" }
+    - { file_name: "picom.conf", dest: "{{ home }}/.config"}
   notify: setup git config
 
 - name: Setup desktop file on autostart dir
