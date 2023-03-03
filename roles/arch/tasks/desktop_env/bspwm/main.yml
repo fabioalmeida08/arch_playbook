@@ -1,4 +1,4 @@
-- name: desktop env | bspwm | 
+- name: desktop env | bspwm |
   tags: desktop env
   package:
     name: "{{ item }}"
@@ -8,7 +8,8 @@
     - sxhkd
     - nitrogen
     - picom
-    - sddm
+    - lightdm
+    - lightdm-slick-greeter
     - rofi
     - polybar
     - xorg
@@ -20,3 +21,5 @@
   notify:
     - give execute permission to files
     - add qt5ct desk env
+    - enable lightdm
+    - config lightdm-greeter
