@@ -3,3 +3,4 @@
 - import_tasks: steam.yml
 - import_tasks: prometheus.yml
 - import_tasks: bspwm.yml
+- import_tasks: lightdm.yml
