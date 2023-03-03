@@ -1,0 +1,10 @@
+- name: enable lightdm
+  service:
+    name: lightdm
+    enabled: true
+
+- name: config lightdm-greeter
+  lineinfile:
+    path: "/etc/lightdm/lightdm.conf"
+    regexp: "^#greeter-session="
+    line: "greeter-session=lightdm-slick-greeter"
