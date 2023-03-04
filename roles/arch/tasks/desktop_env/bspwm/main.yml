@@ -4,12 +4,12 @@
     name: "{{ item }}"
     state: latest
   loop:
+    - lightdm
+    - lightdm-slick-greeter
     - bspwm
     - sxhkd
     - nitrogen
     - picom
-    - lightdm
-    - lightdm-slick-greeter
     - rofi
     - polybar
     - xorg
@@ -18,6 +18,9 @@
     - qt5ct
     - qt6ct
     - lxappearance
+    - adwaita-qt5
+    - adwaita-qt6
+    - materia-gtk-theme
   notify:
     - give execute permission to files
     - add qt5ct desk env
