@@ -1,0 +1,13 @@
+- name: clone yay repo
+  git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: "{{ home }}/yay"
+    update: true
+
+- name: build and install yay
+  command:
+    chdir: "{{ home }}/yay"
+    cmd: "makepkg -si --noconfirm"
+    creates: /usr/bin/yay
+  notify: remove yay git repository
+
