@@ -8,6 +8,7 @@
     - set powerlevel10k for zsh theme
     - source custom p10k config
     - set aliases
+    - set login shell to zsh
 
 - name: set powerlevel10k for zsh theme
   tags: powerlevel10k, theme, zsh
@@ -51,3 +52,8 @@
       alias kdg='f(){ kubectl describe "$1" | grep "$2";  unset -f f; }; f'
       alias kdlf="kubectl delete -f"
       alias kdl="kubectl delete"
+
+- name: set login shell to zsh
+  ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
+  become: true
+  changed_when: false
