@@ -1,0 +1,5 @@
+- name: software | code | install package
+  tags: code, packages, workstation-packages
+  package:
+    name: code
+    state: latest
