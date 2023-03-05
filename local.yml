@@ -1,6 +1,8 @@
 - hosts: localhost
   connection: local
   become: true
+  vars:
+    distro: "{{ ansible_distribution }}"
 
   pre_tasks:
     - name: pre-run | check requirements
@@ -12,10 +14,18 @@
         - python-psutil
         - python-pip
         - python-setuptools
-      
+
     - name: Install github module
       ansible.builtin.pip:
         name: github3.py
+
+    - name: Enable Multilib
+      lineinfile:
+        path: "/etc/pacman.conf"
+        line: |
+          [multilib]
+          Include = /etc/pacman.d/mirrorlist
+      when: distro == 'Archlinux'
 
 - hosts: localhost
   tags: arch
