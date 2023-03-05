@@ -1,4 +1,4 @@
 - name: remove yay Git repository
-      file:
-        path: '{{ home }}/yay'
-        state: absent
+  file:
+    path: "{{ home }}/yay"
+    state: absent
