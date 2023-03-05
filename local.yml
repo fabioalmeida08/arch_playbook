@@ -28,6 +28,11 @@
           Include = /etc/pacman.d/mirrorlist
       when: distro == 'Archlinux'
 
+    - name: pacman -Syu
+      pacman:
+        update_cache: true
+        upgrade: true
+
 - hosts: localhost
   tags: arch
   become: true
