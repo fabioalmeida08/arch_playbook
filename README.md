@@ -5,5 +5,5 @@
 arch post install playbook.
 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/fabioalmeida08/arch_playbook/main/roles/arch/scripts/bootstrap.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/fabioalmeida08/arch_playbook/bootstrap.sh)"
 ```
