@@ -10,14 +10,15 @@ cloneGitRepo () {
 }
 
 runPlaybook () {
-  ansible-playbook local.yml -K
+    cd "$( dirname "$0" )"
+    ansible-playbook local.yml -K
 }
 
-if [[ ! -f local.yml ]]; then
-    setupAnsible
-    cloneGitRepo
+if [[ -e "$( dirname "$0" )/local.yml" ]]; then
     runPlaybook
 else
+    setupAnsible
+    cloneGitRepo
     runPlaybook
 fi
 
