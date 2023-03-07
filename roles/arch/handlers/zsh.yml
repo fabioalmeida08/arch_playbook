@@ -56,4 +56,3 @@
 - name: set login shell to zsh
   ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
   become: true
-  changed_when: false
