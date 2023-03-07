@@ -21,8 +21,10 @@
     - adwaita-qt5
     - adwaita-qt6
     - materia-gtk-theme
+    - xdg-user-dirs
   notify:
     - give execute permission to files
     - add qt5ct desk env
     - enable lightdm
     - config lightdm-greeter
+    - create default xdg dirs
