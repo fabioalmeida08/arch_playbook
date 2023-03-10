@@ -1,0 +1,5 @@
+- name: software | pulseaudio | install package
+  tags: pulseaudio, packages, workstation-packages
+  package:
+    name: pulseaudio
+    state: latest
