@@ -21,7 +21,6 @@
 - import_tasks: software/ssh.yml
 - import_tasks: software/taskwarrior.yml
 - import_tasks: software/unzip.yml
-- import_tasks: software/steam.yml
 - import_tasks: software/code.yml
 - import_tasks: software/pulseaudio.yml
 - import_tasks: software/yay.yml
