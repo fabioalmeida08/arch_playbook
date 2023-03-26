@@ -1,6 +1,9 @@
 #!/bin/bash
 setupAnsible () {
-    sudo pacman -S --needed ansible ansible-core --noconfirm
+    if ! command -v ansible &> /dev/null
+    then
+        sudo pacman -S --needed ansible ansible-core --noconfirm
+    fi
 }
 
 cloneGitRepo () {
