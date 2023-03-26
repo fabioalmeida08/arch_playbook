@@ -12,7 +12,7 @@ check_requirements () {
 
     if ! command -v fakeroot &> /dev/null
     then
-        sudo pacman -S --needed ansible ansible-core --noconfirm
+        sudo pacman -S --needed fakeroot --noconfirm
     fi
     
 }
