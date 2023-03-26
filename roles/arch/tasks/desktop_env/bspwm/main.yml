@@ -5,7 +5,7 @@
     state: latest
   loop:
     - lightdm
-    - lightdm-slick-greeter
+    - lightdm-gtk-greeter
     - bspwm
     - sxhkd
     - nitrogen
@@ -20,11 +20,12 @@
     - lxappearance
     - adwaita-qt5
     - adwaita-qt6
-    - materia-gtk-theme
+    - gnome-themes-extra
     - xdg-user-dirs
   notify:
     - give execute permission to files
     - add qt5ct desk env
     - enable lightdm
     - config lightdm-greeter
+    - config lightdm-gtk-greeter
     - create default xdg dirs
