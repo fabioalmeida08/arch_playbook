@@ -1,15 +1,20 @@
 #!/bin/bash
-setupAnsible () {
+check_requirements () {
     if ! command -v ansible &> /dev/null
     then
         sudo pacman -S --needed ansible ansible-core --noconfirm
     fi
-}
 
-cloneGitRepo () {
-    cd /tmp
-    git clone https://github.com/fabioalmeida08/arch_playbook
-    ansible-playbook /tmp/arch_playbook/local.yml -K
+    if ! command -v git &> /dev/null
+    then
+        sudo pacman -S --needed git --noconfirm
+    fi
+
+    if ! command -v fakeroot &> /dev/null
+    then
+        sudo pacman -S --needed ansible ansible-core --noconfirm
+    fi
+    
 }
 
 runPlaybook () {
@@ -17,11 +22,6 @@ runPlaybook () {
     ansible-playbook local.yml -K
 }
 
-if [[ -e "$( dirname "$0" )/local.yml" ]]; then
-    runPlaybook
-else
-    setupAnsible
-    cloneGitRepo
-    runPlaybook
-fi
+check_requirements
+runPlaybook
 
