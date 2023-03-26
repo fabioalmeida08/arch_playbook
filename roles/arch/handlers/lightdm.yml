@@ -7,4 +7,17 @@
   lineinfile:
     path: "/etc/lightdm/lightdm.conf"
     regexp: "^#greeter-session="
-    line: "greeter-session=lightdm-slick-greeter"
+    line: "greeter-session=lightdm-gtk-greeter"
+
+- name: config lightdm-gtk-greeter
+  lineinfile:
+    path: "/etc/lightdm/lightdm-gtk-greeter.conf"
+    line: |
+      [greeter]
+      theme-name = Adwaita-dark
+      icon-theme-name = Adwaita
+      background = /usr/share/pixmaps/~
+      position = 1%,start 50%,center
+      hide-user-image = true
+      font-name = FireCode Nerd Font 10
+      indicators = ~host;~spacer;~clock;~session;~layout;~power
