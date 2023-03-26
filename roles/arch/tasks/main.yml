@@ -23,6 +23,7 @@
 - import_tasks: software/unzip.yml
 - import_tasks: software/code.yml
 - import_tasks: software/pulseaudio.yml
+- import_tasks: software/ranger.yml
 - import_tasks: software/yay.yml
 
 - import_tasks: desktop_env/bspwm/main.yml
