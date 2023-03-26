@@ -52,6 +52,7 @@
       alias kdg='f(){ kubectl describe "$1" | grep "$2";  unset -f f; }; f'
       alias kdlf="kubectl delete -f"
       alias kdl="kubectl delete"
+      alias r="ranger"
 
 - name: set login shell to zsh
   ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
