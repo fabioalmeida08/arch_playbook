@@ -17,11 +17,11 @@ check_requirements () {
     
 }
 
-runPlaybook () {
+run_playbook () {
     cd "$( dirname "$0" )"
     ansible-playbook local.yml -K
 }
 
 check_requirements
-runPlaybook
+run_playbook
 
