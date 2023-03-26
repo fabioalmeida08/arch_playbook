@@ -11,7 +11,7 @@
     dest: "{{ item.dest }}"
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: 0664
+    mode: 0764
   with_items:
     - { file_name: ".gitconfig", dest: "{{ home }}" }
     - { file_name: ".scripts", dest: "{{ home }}" }
