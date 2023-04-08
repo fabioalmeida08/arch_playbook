@@ -57,6 +57,8 @@
       alias tl="task list"
       alias td="task done"
       alias bt="bashtop"
+      alias pof="poweroff"
+      alias rbt="reboot"
 
 - name: set login shell to zsh
   ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
