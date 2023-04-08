@@ -56,6 +56,7 @@
       alias ta="task add"
       alias tl="task list"
       alias td="task done"
+      alias bt="bashtop"
 
 - name: set login shell to zsh
   ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
