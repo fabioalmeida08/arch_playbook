@@ -5,7 +5,7 @@
     state: latest
   notify: "{{ item }}"
   loop:
-    - start docker service
+    - start docker
     - ensure group docker exists
     - add user to docker group
 

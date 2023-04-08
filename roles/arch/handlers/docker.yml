@@ -11,7 +11,7 @@
     groups: docker
     append: yes
 
-- name: start docker service
+- name: start docker
   tags: docker, service
   service:
     name: docker
