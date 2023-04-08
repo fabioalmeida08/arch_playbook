@@ -6,3 +6,4 @@
 - import_tasks: lightdm.yml
 - import_tasks: yay.yml
 - import_tasks: xdg.yml
+- import_tasks: docker.yml
