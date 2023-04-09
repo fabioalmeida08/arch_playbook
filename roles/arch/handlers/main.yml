@@ -7,3 +7,5 @@
 - import_tasks: yay.yml
 - import_tasks: xdg.yml
 - import_tasks: docker.yml
+- import_tasks: wireshark.yml
+- import_tasks: wallpapers.yml
