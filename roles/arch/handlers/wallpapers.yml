@@ -8,10 +8,9 @@
 
 - name: download wallpapers
   unarchive:
-    src: "https://mega.nz/file/bANS2D4a#shzk8xsB9elYlNt3PMEg7dXIlVHWl1-CNZk2c9Bnaek"
+    src: "wallpapers.tar.gz"
     dest: "/usr/share/wallpapers"
     owner: "{{ user }}"
     group: "{{ user }}"
-    remote_src: yes
     mode: "0764"
     extra_opts: "--strip-components=1"
