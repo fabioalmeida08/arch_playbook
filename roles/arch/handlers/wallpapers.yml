@@ -1,16 +1,12 @@
 - name: create dir for wallpapers
   file:
     path: "/usr/share/wallpapers"
-    owner: "{{ user }}"
-    group: "{{ user }}"
     state: directory
-    mode: "0764"
+    mode: "0733"
 
 - name: unzip wallpapers
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "/usr/share/wallpapers"
-    owner: "{{ user }}"
-    group: "{{ user }}"
-    mode: "0764"
+    mode: "0644"
     extra_opts: "--strip-components=1"
