@@ -2,11 +2,10 @@
   file:
     path: "/usr/share/wallpapers"
     state: directory
-    mode: "0733"
+    mode: "0766"
 
 - name: unzip wallpapers
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "/usr/share/wallpapers/"
     mode: "0644"
-    extra_opts: "--strip-components=1"
