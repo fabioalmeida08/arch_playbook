@@ -6,7 +6,7 @@
     state: directory
     mode: "0764"
 
-- name: download wallpapers
+- name: unzip wallpapers
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "/usr/share/wallpapers"
