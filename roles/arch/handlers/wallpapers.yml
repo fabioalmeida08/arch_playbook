@@ -7,6 +7,6 @@
 - name: unzip wallpapers
   unarchive:
     src: "wallpapers.tar.gz"
-    dest: "/usr/share/wallpapers"
+    dest: "/usr/share/wallpapers/"
     mode: "0644"
     extra_opts: "--strip-components=1"
