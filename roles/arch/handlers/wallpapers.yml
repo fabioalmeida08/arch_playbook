@@ -1,4 +1,4 @@
-- name: Downaload wallpapers
+- name: download wallpapers
   unarchive:
     src: "https://mega.nz/file/bANS2D4a#shzk8xsB9elYlNt3PMEg7dXIlVHWl1-CNZk2c9Bnaek"
     dest: "/usr/share/wallpapers"
