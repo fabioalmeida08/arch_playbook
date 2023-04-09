@@ -29,4 +29,5 @@
     - config lightdm-greeter
     - config lightdm-gtk-greeter
     - create default xdg dirs
+    - create dir for wallpapers
     - download wallpapers
