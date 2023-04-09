@@ -1,0 +1,9 @@
+- name: Downaload wallpapers
+  unarchive:
+    src: "https://mega.nz/file/bANS2D4a#shzk8xsB9elYlNt3PMEg7dXIlVHWl1-CNZk2c9Bnaek"
+    dest: "/usr/share/wallpapers"
+    remote_src: yes
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: "0764"
+    extra_opts: "--strip-components=1"
