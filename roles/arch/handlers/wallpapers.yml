@@ -8,5 +8,5 @@
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "/usr/share/wallpapers"
-    mode: "0644"
+    mode: "0744"
 
