@@ -1,5 +1,6 @@
-- name: software | code | install package
-  tags: code, packages, workstation-packages
-  package:
-    name: code
-    state: latest
+- name: software | vscode | install package
+  become_user: "{{ user }}"
+  tags: vscode, packages, workstation-packages
+  shell:
+    cmd: yay -S visual-studio-code-bin --noconfirm
+
