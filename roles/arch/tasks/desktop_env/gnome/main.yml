@@ -2,3 +2,6 @@
   tags: gnome, packages, workstation-packages
   shell:
     cmd: pacman -S gnome --noconfirm --overwrite '*'
+  notify:
+   - add qt5ct desk env
+   - enable gdm
