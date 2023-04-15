@@ -5,7 +5,7 @@
 - import_tasks: software/bashtop.yml
 - import_tasks: software/bat.yml
 - import_tasks: software/flameshot.yml
-- import_tasks: software/firefox.yml
+#- import_tasks: software/firefox.yml
 - import_tasks: software/fonts.yml
 - import_tasks: software/git.yml
 - import_tasks: software/kitty.yml
