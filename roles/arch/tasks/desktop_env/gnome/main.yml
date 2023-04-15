@@ -5,3 +5,128 @@
   notify:
    - add qt5ct desk env
    - enable gdm
+
+- name: gnome | keybindings | disable default key bindings
+  become_user: "{{ user }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/www",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/home",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/email",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/terminal",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/screensaver",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/shell/keybindings/show-screenshot-ui",
+        value: "@as []",
+      }
+    - {
+        key: "/org/gnome/shell/keybindings/toggle-message-tray",
+        value: "@as []",
+      }
+
+- name: gnome | keybindings | set custom-keybindings
+  become_user: "{{ user }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/']"
+
+- name: gnome | keybindings | set terminal keybinding
+  become_user: "{{ user }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name",
+        value: "'Terminal'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding",
+        value: "'<Alt>Return'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command",
+        value: "'kitty'",
+      }
+
+- name: gnome | keybindings | set screenshot keybinding
+  become_user: "{{ user }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name",
+        value: "'Print'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding",
+        value: "'Print'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command",
+        value: "'flameshot gui'",
+      }
+
+- name: gnome | keybindings | pavu control keybinding
+  become_user: "{{ user }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name",
+        value: "'Pavu-control'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding",
+        value: "'<Super>v'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command",
+        value: "'pavucontrol'",
+      }
+
+- name: gnome | keybindings | nautilus home keybinding
+  become_user: "{{ user }}"
+  vars:
+    user: "{{ ansible_env.SUDO_USER }}"
+  tags: gnome,keybindings
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name",
+        value: "'Nautilus'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding",
+        value: "'<Super>f'",
+      }
+    - {
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/command",
+        value: "'nautilus -w {{ home }}'",
+      }
