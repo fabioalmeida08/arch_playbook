@@ -33,3 +33,4 @@
 - import_tasks: software/code.yml
 
 - import_tasks: desktop_env/bspwm/main.yml
+- import_tasks: software/dnsmasq.yml

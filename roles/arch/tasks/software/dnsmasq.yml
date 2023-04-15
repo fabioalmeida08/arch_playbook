@@ -1,6 +1,6 @@
 - name: drivers |  nvidia
   package:
-    name: "dnsmasq"
+    name: dnsmasq
     state: latest
   notify: "{{ item }}"
   loop:
