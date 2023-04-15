@@ -1,0 +1,8 @@
+- name: software | qtct | install package
+  tags: qtct, packages, workstation-packages
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - qt5ct
+    - qt6ct
