@@ -10,3 +10,5 @@
     - adwaita-qt5
     - adwaita-qt6
     - gnome-themes-extra
+    - dconf
+    - dconf-editor
