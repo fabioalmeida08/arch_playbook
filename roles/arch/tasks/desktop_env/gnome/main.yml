@@ -1,9 +1,5 @@
 - name: software | gnome | install package
+  become_user: "{{ user }}"
   tags: gnome, packages, workstation-packages
-  package:
-    name: "{{ item }}"
-    state: latest
-  loop:
-    - gnome
-    - qt5ct
-    - qt6ct
+  shell:
+    cmd: pacman -S gnome --noconfirm --overwrite '*'
