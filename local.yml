@@ -8,7 +8,7 @@
 
   pre_tasks:
     - name: pre-run | check requirements
-      become_usr: "{{ user }}"
+      become_user: "{{ user }}"
       tags: always
       package:
         name: "{{ item }}"
