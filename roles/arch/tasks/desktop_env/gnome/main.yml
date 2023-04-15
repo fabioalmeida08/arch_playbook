@@ -1,0 +1,9 @@
+- name: software | gnome | install package
+  tags: gnome, packages, workstation-packages
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - gnome
+    - qt5ct
+    - qt6ct
