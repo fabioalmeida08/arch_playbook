@@ -1,11 +1,14 @@
 - hosts: localhost
-  connection: local
-  become: true
   vars:
     distro: "{{ ansible_distribution }}"
+    user: "{{ ansible_env.USER }}"
+  connection: local
+  become: true
+  become_user: "{{ user }}"
 
   pre_tasks:
     - name: pre-run | check requirements
+      become_usr: "{{ user }}"
       tags: always
       package:
         name: "{{ item }}"
@@ -35,8 +38,8 @@
 
 - hosts: localhost
   vars:
-    home: "/home/{{ ansible_env.SUDO_USER }}"
-    user: "{{ ansible_env.SUDO_USER }}"
+    home: "/home/{{ ansible_env.USER }}"
+    user: "{{ ansible_env.USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
   tags: arch
   become: true
