@@ -36,6 +36,7 @@
 - hosts: localhost
   tags: arch
   become: true
+  become_user: "{{ user }}"
   vars:
     home: "/home/{{ ansible_env.SUDO_USER }}"
     user: "{{ ansible_env.SUDO_USER }}"
