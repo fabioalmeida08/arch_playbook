@@ -36,7 +36,7 @@
 - hosts: localhost
   tags: arch
   vars:
-    home: "/home/{{ ansible_env.USER }}"
+    home: "/home/{{ ansible_env.SUDO_USER }}"
     user: "{{ ansible_env.SUDO_USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
   become: true
