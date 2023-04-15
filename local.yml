@@ -1,7 +1,8 @@
 - hosts: localhost
   vars:
     distro: "{{ ansible_distribution }}"
-    user: "{{ ansible_env.USER }}"
+    user: "{{ ansible_env.SUDO_USER }}"
+    sudo_user: "{{ ansible_env.USER }}"
   connection: local
   become: true
   become_user: "{{ user }}"
@@ -35,11 +36,17 @@
       pacman:
         update_cache: true
         upgrade: true
+    - name: Print user
+      debug:
+        var: sudo_user
+    - name: print sudo_user
+      debug:
+        var: user
 
 - hosts: localhost
   vars:
-    home: "/home/{{ ansible_env.USER }}"
-    user: "{{ ansible_env.USER }}"
+    home: "/home/{{ ansible_env.SUDO_USER }}"
+    user: "{{ ansible_env.SUDO_USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
   tags: arch
   become: true
