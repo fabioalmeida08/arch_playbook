@@ -37,10 +37,9 @@
   tags: arch
   vars:
     home: "/home/{{ ansible_env.USER }}"
-    user: "{{ ansible_env.USER }}"
+    user: "{{ ansible_env.SUDO_USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
   become: true
-  become_user: "{{ user }}"
   vars_prompt:
     - name: git_username
       prompt: git config username
