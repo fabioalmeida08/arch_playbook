@@ -34,13 +34,13 @@
         upgrade: true
 
 - hosts: localhost
-  tags: arch
-  become: true
-  become_user: "{{ user }}"
   vars:
     home: "/home/{{ ansible_env.SUDO_USER }}"
     user: "{{ ansible_env.SUDO_USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
+  tags: arch
+  become: true
+  become_user: "{{ user }}"
   vars_prompt:
     - name: git_username
       prompt: git config username
