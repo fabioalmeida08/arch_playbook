@@ -3,3 +3,9 @@
   service:
     name: gdm
     enabled: yes
+
+- name: install pacman update indicator
+  become_user: "{{ user }}"
+  tags: pacman update indicator, packages, workstation-packages
+  shell:
+    cmd: yay -S gnome-shell-extension-arch-update --noconfirm
