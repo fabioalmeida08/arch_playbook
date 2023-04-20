@@ -20,7 +20,7 @@
     - gnome-disk-utility
     - gnome-logs
     - gnome-menus
-    - gnome-session-manager
+    - gnome-session
     - gnome-settings-daemon
     - gnome-shell
     - gnome-shell-extensions
