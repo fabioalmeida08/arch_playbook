@@ -1,9 +1,53 @@
-- name: software | gnome | install package
-  tags: gnome, packages, workstation-packages
-  shell:
-    cmd: pacman -S gnome --noconfirm --overwrite '*'
+# - name: software | gnome | install package
+#   tags: gnome, packages, workstation-packages
+#   shell:
+#     cmd: pacman -S gnome --noconfirm --overwrite '*'
+#   notify:
+#     - add qt5ct desk env
+#     - enable gdm
+
+- name: desktop env | gnome |
+  tags: desktop env
+  package:
+    name: '{{ item }}'
+    state: latest
+  loop:
+    - evince
+    - gdm
+    - gnome-backgrounds
+    - gnome-calculator
+    - gnome-color-manager
+    - gnome-disk-utility
+    - gnome-logs
+    - gnome-menus
+    - gnome-session-manager
+    - gnome-settings-daemon
+    - gnome-shell
+    - gnome-shell-extensions
+    - gnome-shell-maia
+    - gnome-shell-extension-custom-accent-colors
+    - gnome-shell-extension-dash-to-dock
+    - gnome-shell-extension-dash-to-panel
+    - gnome-shell-extension-gnome-ui-tune
+    - gnome-shell-extension-gtk4-desktop-icons-ng
+    - gnome-shell-extension-legacy-theme-auto-switcher
+    - gnome-shell-extension-appindicator
+    - gnome-system-monitor
+    - gvfs-google
+    - gvfs-nfs
+    - gvfs-smb
+    - qt5ct
+    - qt6ct
+    - lxappearance
+    - adwaita-qt5
+    - adwaita-qt6
+    - gnome-themes-extra
+    - nautilus
+    - xdg-user-dirs
+    - baobab
+    - bibata-cursor-theme
   notify:
-   - add qt5ct desk env
-   - enable gdm
-
-
+    - add qt5ct desk env
+    - enable gdm
+    - install pacman update indicator
+    - create default xdg dirs
