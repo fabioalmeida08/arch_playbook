@@ -26,7 +26,7 @@
 - import_tasks: software/docker.yml
 - import_tasks: software/docker-c.yml
 - import_tasks: software/lsd.yml
-- import_tasks: software/qtct.yml
+- import_tasks: software/themes.yml
 
 - import_tasks: software/yay.yml
 - import_tasks: software/insomnia.yml
