@@ -26,6 +26,8 @@
     - gnome-shell-extensions
     - gnome-shell-extension-appindicator
     - gnome-system-monitor
+    - gnome-control-center
+    - gnome-tweaks
     - gvfs-google
     - gvfs-nfs
     - gvfs-smb
