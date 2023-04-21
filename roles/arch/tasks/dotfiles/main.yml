@@ -24,8 +24,7 @@
     - { file_name: "picom", dest: "{{ home }}/.config" }
     - { file_name: "ranger", dest: "{{ home }}/.config"}
     - { file_name: "dconf", dest: "{{ home }}/.config"}
-  notify: "{{ item }}"
-  loop:
+  notify:
     - setup git config
     - set window title shortcut
 
