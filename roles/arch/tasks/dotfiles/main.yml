@@ -12,7 +12,7 @@
     owner: "{{ user }}"
     group: "{{ user }}"
     mode: 0764
-  with_items:
+  loop:
     - { file_name: ".gitconfig", dest: "{{ home }}" }
     - { file_name: ".scripts", dest: "{{ home }}" }
     - { file_name: "kitty", dest: "{{ home }}/.config/" }
