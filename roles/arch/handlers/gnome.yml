@@ -20,7 +20,7 @@
   become_user: "{{ user }}"
   tags: command, gsettings, dconf
   shell:
-    cmd: "dconf load / < {{ home }}/.config/dconf/keyboard-shortcuts"
+    cmd: "dconf load / < {{ home }}/.config/dconf/settings.dconf"
 
 - name: enable shell extensions
   become_user: "{{ user }}"
