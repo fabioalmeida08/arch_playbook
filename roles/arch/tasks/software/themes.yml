@@ -6,9 +6,9 @@
   loop:
     - qt5ct
     - qt6ct
-    - lxappearance
     - adwaita-qt5
     - adwaita-qt6
     - gnome-themes-extra
+    - papirus-icon-theme
     - dconf
     - dconf-editor
