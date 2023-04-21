@@ -14,10 +14,14 @@
   file:
     path: "{{ home }}/Pictures/Wallpapers"
     state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
     mode: "0764"
 
 - name: unzip wallpapers gnome
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "{{ home }}/Pictures/Wallpapers"
+    owner: "{{ user }}"
+    group: "{{ user }}"
     mode: "0764"
