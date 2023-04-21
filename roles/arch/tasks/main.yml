@@ -15,7 +15,6 @@
 - import_tasks: software/prometheus.yml
 - import_tasks: software/pavucontrol.yml
 - import_tasks: software/qbittorrent.yml
-- import_tasks: software/steam.yml
 - import_tasks: software/vim.yml
 - import_tasks: software/ssh.yml
 - import_tasks: software/taskwarrior.yml
@@ -31,6 +30,7 @@
 - import_tasks: software/insomnia.yml
 - import_tasks: software/brave.yml
 - import_tasks: software/code.yml
+- import_tasks: software/steam.yml
 
 - import_tasks: desktop_env/gnome/main.yml
 - import_tasks: software/dnsmasq.yml
