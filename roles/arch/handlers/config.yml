@@ -18,6 +18,6 @@
 - name: set window title shortcut
   tags: dconf, config
   lineinfile:
-    path: "{{ home }}/.config/dconf/keyboard-shortcuts"
+    path: "{{ home }}/.config/dconf/settings.dconf"
     regexp: "^command='bash'"
     line: "command='bash {{ home }}/.scripts/toggle-window-title.sh'"
