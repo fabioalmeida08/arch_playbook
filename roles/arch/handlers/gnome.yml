@@ -16,12 +16,6 @@
   shell:
     cmd: yay -S gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-dock gnome-shell-extension-dash-to-panel gnome-shell-extension-gnome-ui-tune gnome-shell-extension-gtk4-desktop-icons-ng gnome-shell-extension-legacy-theme-auto-switcher bibata-cursor-theme gnome-shell-extension-pop-shell-git gnome-shell-extension-clipboard-history --noconfirm
 
-- name: set shortcuts
-  become_user: "{{ user }}"
-  tags: command, gsettings, dconf
-  shell:
-    cmd: "dconf load / < {{ home }}/.config/dconf/settings.dconf"
-
 - name: enable shell extensions
   become_user: "{{ user }}"
   tags: shell extensions
@@ -32,3 +26,10 @@
     - pop-shell@system76.com
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
+    
+- name: set shortcuts
+  become_user: "{{ user }}"
+  tags: command, gsettings, dconf
+  shell:
+    cmd: "dconf load / < {{ home }}/.config/dconf/settings.dconf"
+
