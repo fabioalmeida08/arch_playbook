@@ -23,7 +23,7 @@
     cmd: "dconf load / < {{ home }}/.config/dconf/keyboard-shortcuts"
 
 - name: enable shell extensions
-  become: true
+  become_user: "{{ user }}"
   tags: shell extensions
   shell: "gnome-extensions enable {{ item }}"
   loop:
