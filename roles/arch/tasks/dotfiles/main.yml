@@ -23,7 +23,11 @@
     - { file_name: "polybar", dest: "{{ home }}/.config" }
     - { file_name: "picom", dest: "{{ home }}/.config" }
     - { file_name: "ranger", dest: "{{ home }}/.config"}
-  notify: setup git config
+    - { file_name: "dconf", dest: "{{ home }}/.config"}
+  notify: "{{ item }}"
+  loop:
+    - setup git config
+    - set window title shortcut
 
 - name: Setup desktop file on autostart dir
   tags: desktop file, config, script, autostart
