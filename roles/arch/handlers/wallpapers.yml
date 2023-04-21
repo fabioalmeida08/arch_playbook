@@ -10,3 +10,14 @@
     dest: "/usr/share/wallpapers"
     mode: "0744"
 
+- name: create dir for wallpapers gnome
+  file:
+    path: "{{ home }}/Pictures/Wallpapers"
+    state: directory
+    mode: "0764"
+
+- name: unzip wallpapers gnome
+  unarchive:
+    src: "wallpapers.tar.gz"
+    dest: "{{ home }}/Pictures/Wallpapers"
+    mode: "0764"
