@@ -1,2 +1,0 @@
-#- import_task: bspwm/main.yml
-- import_task: gnome/main.yml
