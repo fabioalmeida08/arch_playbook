@@ -25,3 +25,4 @@
     owner: "{{ user }}"
     group: "{{ user }}"
     mode: "0764"
+    strip_components: 1
