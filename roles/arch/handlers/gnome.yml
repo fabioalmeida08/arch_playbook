@@ -14,4 +14,4 @@
   become_user: "{{ user }}"
   tags: pacman update indicator, packages, workstation-packages
   shell:
-    cmd: yay -S gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-dock gnome-shell-extension-dash-to-panel gnome-shell-extension-gnome-ui-tune gnome-shell-extension-gtk4-desktop-icons-ng gnome-shell-extension-legacy-theme-auto-switcher bibata-cursor-theme --noconfirm
+    cmd: yay -S gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-dock gnome-shell-extension-dash-to-panel gnome-shell-extension-gnome-ui-tune gnome-shell-extension-gtk4-desktop-icons-ng gnome-shell-extension-legacy-theme-auto-switcher bibata-cursor-theme gnome-shell-extension-pop-shell-git --noconfirm
