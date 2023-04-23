@@ -12,7 +12,7 @@
 
 - name: create dir for wallpapers gnome
   file:
-    path: "{{ home }}/Pictures/Wallpapers"
+    path: "{{ home }}/Wallpapers"
     state: directory
     owner: "{{ user }}"
     group: "{{ user }}"
@@ -21,7 +21,7 @@
 - name: unzip wallpapers gnome
   unarchive:
     src: "wallpapers.tar.gz"
-    dest: "{{ home }}/Pictures/Wallpapers"
+    dest: "{{ home }}/Wallpapers"
     owner: "{{ user }}"
     group: "{{ user }}"
     mode: "0764"
