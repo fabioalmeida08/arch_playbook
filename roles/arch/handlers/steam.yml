@@ -1,6 +1,6 @@
 - name: create the dir for eg-proton
   file:
-    path: '{{ home }}/.steam/root/compatibilitytools.d'
+    path: '{{ home }}/.local/share/Steam/compatibilitytools.d'
     owner: '{{ user }}'
     group: '{{ user }}'
     state: directory
@@ -16,7 +16,7 @@
 - name: install proton ge
   unarchive:
     src: "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/{{ proton_ge_latest['tag'] }}/{{ proton_ge_latest['tag']}}.tar.gz"
-    dest: '{{ home }}/.steam/root/compatibilitytools.d'
+    dest: '{{ home }}/.local/share/Steam/compatibilitytools.d'
     remote_src: yes
     owner: '{{ user }}'
     group: '{{ user }}'
