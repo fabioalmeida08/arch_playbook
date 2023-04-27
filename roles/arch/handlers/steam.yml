@@ -27,3 +27,9 @@
   tags: pacman update indicator, packages, workstation-packages
   shell:
     cmd: yay -S mangohud lib32-mangohud --noconfirm
+  notify: add mangohud on system env
+
+- name: add mangohud on system env
+  lineinfile:
+    path: "/etc/environment"
+    line: MANGOHUD=1
