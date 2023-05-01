@@ -12,3 +12,4 @@
     - adobe-source-han-sans-cn-fonts
     - adobe-source-han-sans-kr-fonts
     - noto-fonts-emoji
+  notify: locales config
