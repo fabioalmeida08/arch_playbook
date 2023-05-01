@@ -11,3 +11,4 @@
 - import_tasks: wallpapers.yml
 - import_tasks: dnsmasq.yml
 - import_tasks: gnome.yml
+- import_tasks: locales.yml
