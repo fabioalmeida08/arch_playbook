@@ -1,0 +1,5 @@
+- name: software | gamemode | install package
+  tags: gamemode, packages, workstation-packages
+  package:
+    name: gamemode
+    state: latest
