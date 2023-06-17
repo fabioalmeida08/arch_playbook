@@ -29,12 +29,3 @@
     - setup git config
     - set window title shortcut
 
-- name: Setup desktop file on autostart dir
-  tags: desktop file, config, script, autostart
-  copy:
-    src: "{{ home }}/.scripts/modmap.desktop"
-    dest: "{{ home }}/.config/autostart/"
-    owner: "{{ user }}"
-    group: "{{ user }}"
-    mode: 0764
-  notify: config autostart desktopfile
