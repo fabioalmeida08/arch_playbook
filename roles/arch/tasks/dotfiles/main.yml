@@ -25,7 +25,9 @@
     - { file_name: "ranger", dest: "{{ home }}/.config"}
     - { file_name: "dconf", dest: "{{ home }}/.config"}
     - { file_name: "mpv", dest: "{{ home }}/.config"}
+    - { file_name: "MangoHud", dest: "{{ home }}/.config"}
   notify:
     - setup git config
     - set window title shortcut
+    - set mangohud output
 
