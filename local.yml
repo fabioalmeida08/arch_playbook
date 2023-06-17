@@ -15,10 +15,6 @@
         - python-pip
         - python-setuptools
 
-    - name: Install github module
-      ansible.builtin.pip:
-        name: github3.py
-
     - name: Enable Multilib
       replace:
         path: "/etc/pacman.conf"
