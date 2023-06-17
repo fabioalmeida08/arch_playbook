@@ -30,9 +30,9 @@
       Accept: "application/vnd.github.v3+json"
   register: release_info
 
-  - name: Parse release tag
-    set_fact:
-      latest_tag: "{{ release_info.json.tag_name }}"
+- name: Parse release tag
+  set_fact:
+    latest_tag: "{{ release_info.json.tag_name }}"
 
 
 - name: install proton ge
