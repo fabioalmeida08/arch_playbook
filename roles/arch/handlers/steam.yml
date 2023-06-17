@@ -36,6 +36,8 @@
 
 
 - name: install proton ge
+  vars:
+    latest_tag: "{{ latest_tag }}"
   unarchive:
     src: "https://github.com/GloriousEggroll/proton-ge-custom/archive/{{ latest_tag }}.tar.gz"
     dest: "{{ home }}/.local/share/Steam/compatibilitytools.d"
