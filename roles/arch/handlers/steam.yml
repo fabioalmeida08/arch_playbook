@@ -23,11 +23,13 @@
     mode: '0755'
 
 - name: install mangohud
-  become_user: '{{ user }}'
-  tags: pacman update indicator, packages, workstation-packages
-  shell:
-    cmd: yay -S mangohud lib32-mangohud --noconfirm
-  notify: add mangohud on system env
+  tags: steam, mangohud
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - mangohud
+    - lib32-mangohud
 
 - name: add mangohud on system env
   lineinfile:
