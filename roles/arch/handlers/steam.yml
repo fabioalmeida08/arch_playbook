@@ -23,21 +23,17 @@
 #     mode: '0755'
 
 - name: get proton-ge latest tag
-  tasks:
-  - name: fetch realease
-    uri:
-      url: "https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest"
-      return_content: yes
-      headers:
-        Accept: "application/vnd.github.v3+json"
-    register: release_info
+  uri:
+    url: "https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest"
+    return_content: yes
+    headers:
+      Accept: "application/vnd.github.v3+json"
+  register: release_info
 
   - name: Parse release tag
     set_fact:
       latest_tag: "{{ release_info.json.tag_name }}"
-  - name: Print latest release tag
-    debug:
-      var: latest_tag
+
 
 - name: install proton ge
   unarchive:
