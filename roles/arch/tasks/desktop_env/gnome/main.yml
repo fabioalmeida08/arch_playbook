@@ -33,6 +33,7 @@
     - gvfs-smb
     - xdg-user-dirs
     - baobab
+    - power-profiles-daemon
   notify:
     - add qt5ct desk env
     - enable gdm
