@@ -61,6 +61,7 @@
       alias rbt="reboot"
       alias ls="lsd"
       alias yup="yay --noconfirm"
+      source /usr/share/bash-completion/completions/aws
 
 - name: set login shell to zsh
   ansible.builtin.command: usermod --shell /bin/zsh {{ user }}
