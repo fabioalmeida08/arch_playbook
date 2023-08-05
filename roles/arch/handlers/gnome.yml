@@ -14,7 +14,7 @@
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
   shell:
-    cmd: yay -S bibata-cursor-theme gnome-shell-extension-pop-shell-git gnome-shell-extension-clipboard-history --noconfirm
+    cmd: yay -S bibata-cursor-theme gnome-shell-extension-forge gnome-shell-extension-clipboard-history --noconfirm
 # gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-dock gnome-shell-extension-dash-to-panel gnome-shell-extension-gnome-ui-tune gnome-shell-extension-gtk4-desktop-icons-ng gnome-shell-extension-legacy-theme-auto-switcher
 - name: enable shell extensions
   become_user: '{{ user }}'
@@ -23,7 +23,8 @@
   loop:
     - appindicatorsupport@rgcjonas.gmail.com
     - gnome-ui-tune@itstime.tech
-    - pop-shell@system76.com
+  #  - pop-shell@system76.com
+    - forge@jmmaranan
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
 
