@@ -5,7 +5,8 @@
     state: latest
   notify: "{{ item }}"
   loop:
-    - create the dir for eg-proton
-    - get proton-ge latest tag
-    - install proton ge
+    # - create the dir for eg-proton
+    # - get proton-ge latest tag
+    # - install proton ge
     - install mangohud
+    - add mangohud on system env
