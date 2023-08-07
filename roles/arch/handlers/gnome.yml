@@ -10,6 +10,12 @@
   shell:
     cmd: yay -S gnome-shell-extension-arch-update --noconfirm
 
+- name: install gnome ui
+  become_user: '{{ user }}'
+  tags: github gnome ui improve
+  shell:
+    cmd: yay -S gnome-shell-extension-arch-update --noconfirm
+
 - name: install custom extensions
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
@@ -22,7 +28,7 @@
   shell: 'gnome-extensions enable {{ item }}'
   loop:
     - appindicatorsupport@rgcjonas.gmail.com
-  #  - gnome-ui-tune@itstime.tech
+    - gnome-ui-tune@itstime.tech
     - pop-shell@system76.com
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
@@ -38,3 +44,29 @@
     path: '{{ home }}/.config/MangoHud/MangoHud.conf'
     regexp: '^output_folder='
     line: 'output_folder={{ home }}'
+
+- name: create the dir for gnome-extensions 
+  file:
+    path: '{{ home }}/.local/share/gnome-shell/extensions'
+    owner: '{{ user }}'
+    group: '{{ user }}'
+    state: directory
+    mode: '0764'
+
+- name: get gnome ui tune lateste release
+  uri:
+    url: 'https://api.github.com/repos/axxapy/gnome-ui-tune/releases/latest'
+    return_content: yes
+    headers:
+      Accept: 'application/vnd.github.v3+json'
+  register: release_info
+
+- name: install gnome ui tune
+  unarchive:
+    src: 'https://github.com/axxapy/gnome-ui-tune/archive/{{ release_info.json.tag_name }}.zip'
+    dest: '{{ home }}/.local/share/gnome-shell/extensions'
+    remote_src: yes
+    owner: '{{ user }}'
+    group: '{{ user }}'
+    mode: '0755'
+  extra_opts: '--transform=s,^gnome-ui-tune-{{ release_info.json.tag_name }},gnome-ui-tune@itstime.tech,'
