@@ -39,6 +39,9 @@
     - enable gdm
     - install pacman update indicator
     - create default xdg dirs
+    - create the dir for gnome-extensions
+    - get gnome ui tune lateste release
+    - install gnome ui tune
     - install custom extensions
     - create dir for wallpapers gnome
     - unzip wallpapers gnome
