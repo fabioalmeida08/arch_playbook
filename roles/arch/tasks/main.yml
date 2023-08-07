@@ -33,6 +33,8 @@
 - import_tasks: software/brave.yml
 - import_tasks: software/code.yml
 - import_tasks: software/steam.yml
+- import_tasks: software/lutris.yml
+- import_tasks: software/protonup-qt.yml
 
 - import_tasks: desktop_env/gnome/main.yml
 - import_tasks: software/dnsmasq.yml
