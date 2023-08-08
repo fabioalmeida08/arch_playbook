@@ -1,4 +1,4 @@
-- name: drivers |  nvidia
+- name: dnsmasq
   package:
     name: dnsmasq
     state: latest
