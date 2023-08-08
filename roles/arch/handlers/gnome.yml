@@ -28,7 +28,7 @@
   shell: 'gnome-extensions enable {{ item }}'
   loop:
     - appindicatorsupport@rgcjonas.gmail.com
-    - gnome-ui-tune@itstime.tech
+    # - gnome-ui-tune@itstime.tech
     - pop-shell@system76.com
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
@@ -75,7 +75,7 @@
     remote_src: yes
     owner: '{{ user }}'
     group: '{{ user }}'
-    mode: '0755'
+    mode: '0744'
 
 - name: extract version number
   set_fact:
@@ -86,3 +86,9 @@
   command: mv "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune-{{ version_number }}" "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
   args:
     creates: "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
+
+- name: install extension-manager
+  become_user: "{{ user }}"
+  tags: extension-manager, packages, workstation-packages
+  shell:
+    cmd: yay -S extension-manager --noconfirm
