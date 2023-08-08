@@ -69,4 +69,4 @@
     owner: '{{ user }}'
     group: '{{ user }}'
     mode: '0755'
-  extra_opts: '--transform=s,^gnome-ui-tune-{{ release_info.json.tag_name }},gnome-ui-tune@itstime.tech,'
+    extra_opts: '--transform=s,^gnome-ui-tune-{{ release_info.json.tag_name }},gnome-ui-tune@itstime.tech,'
