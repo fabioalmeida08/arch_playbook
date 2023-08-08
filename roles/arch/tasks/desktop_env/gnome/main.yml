@@ -34,6 +34,7 @@
     - xdg-user-dirs
     - baobab
     - power-profiles-daemon
+    - nautilus
   notify:
     - add qt5ct desk env
     - enable gdm
