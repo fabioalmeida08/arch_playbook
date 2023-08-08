@@ -20,15 +20,15 @@
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
   shell:
-    cmd: yay -S bibata-cursor-theme gnome-shell-extension-clipboard-history gnome-shell-extension-pop-shell-git --noconfirm
-# gnome-shell-extension-forge gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-dock gnome-shell-extension-dash-to-panel gnome-shell-extension-gnome-ui-tune gnome-shell-extension-gtk4-desktop-icons-ng gnome-shell-extension-legacy-theme-auto-switcher
+    cmd: yay -S gnome-shell-extension-blur-my-shell  gnome-shell-extension-unblank-git bibata-cursor-theme gnome-shell-extension-clipboard-history gnome-shell-extension-pop-shell-git --noconfirm
 - name: enable shell extensions
   become_user: '{{ user }}'
   tags: shell extensions
   shell: 'gnome-extensions enable {{ item }}'
   loop:
     - appindicatorsupport@rgcjonas.gmail.com
-    # - gnome-ui-tune@itstime.tech
+    - blur-my-shell@aunetx
+    - unblank@sun.wxg@gmail.com
     - pop-shell@system76.com
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
