@@ -53,20 +53,36 @@
     state: directory
     mode: '0764'
 
+
 - name: get gnome ui tune lateste release
   uri:
-    url: 'https://api.github.com/repos/axxapy/gnome-ui-tune/releases/latest'
+    url: https://api.github.com/repos/axxapy/gnome-ui-tune/releases/latest
     return_content: yes
-    headers:
-      Accept: 'application/vnd.github.v3+json'
   register: release_info
 
-- name: install gnome ui tune
+- name: download gnome-ui-tune latest release
+  get_url:
+    url: "https://github.com/axxapy/gnome-ui-tune/archive/{{ release_info.json.tag_name }}.zip"
+    dest: "/tmp/gnome-ui-tune-latest.zip"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: "0644"
+
+- name: extract gnome ui tune
   unarchive:
-    src: 'https://github.com/axxapy/gnome-ui-tune/archive/{{ release_info.json.tag_name }}.zip'
+    src: '/tmp/gnome-ui-tune-latest.zip'
     dest: '{{ home }}/.local/share/gnome-shell/extensions'
     remote_src: yes
     owner: '{{ user }}'
     group: '{{ user }}'
     mode: '0755'
-    extra_opts: '--transform=s,^gnome-ui-tune-{{ release_info.json.tag_name }},gnome-ui-tune@itstime.tech,'
+
+- name: extract version number
+  set_fact:
+    version_number: "{{ release_info.json.tag_name | regex_replace('[^0-9.]', '') }}"
+
+
+- name: rename gnome ui tune dir
+  command: mv "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune-{{ version_number }}" "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
+  args:
+    creates: "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
