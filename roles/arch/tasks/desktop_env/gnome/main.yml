@@ -41,7 +41,10 @@
     - create default xdg dirs
     - create the dir for gnome-extensions
     - get gnome ui tune lateste release
-    - install gnome ui tune
+    - download gnome-ui-tune latest release
+    - extract gnome ui tune
+    - extract version number
+    - rename gnome ui tune dir
     - install custom extensions
     - create dir for wallpapers gnome
     - unzip wallpapers gnome
