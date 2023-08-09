@@ -56,7 +56,7 @@
       alias ta="task add"
       alias tl="task list"
       alias td="task done"
-      alias bt="bashtop"
+      alias bt="btop"
       alias pof="poweroff"
       alias rbt="reboot"
       alias ls="lsd"
