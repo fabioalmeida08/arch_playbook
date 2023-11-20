@@ -1,0 +1,8 @@
+- name: dnsmasq
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - net-tools
+    - bind-tools
+    - traceroute
