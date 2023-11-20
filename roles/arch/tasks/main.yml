@@ -10,7 +10,7 @@
 - import_tasks: software/git.yml
 - import_tasks: software/kitty.yml
 - import_tasks: software/mpv.yml
-- import_tasks: software/net-tools.yml
+- import_tasks: software/network.yml
 - import_tasks: software/oh-my-zsh.yml
 # - import_tasks: software/prometheus-node-exporter.yml
 # - import_tasks: software/prometheus.yml
