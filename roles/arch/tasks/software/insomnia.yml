@@ -1,5 +1,0 @@
-- name: software | insomnia | install package
-  become_user: "{{ user }}"
-  tags: insomnia, packages, workstation-packages
-  shell:
-    cmd: yay -S insomnia-bin --noconfirm

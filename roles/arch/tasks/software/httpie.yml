@@ -1,0 +1,5 @@
+- name: software | httpie | install package
+  become_user: "{{ user }}"
+  tags: httpie, packages, workstation-packages
+  shell:
+    cmd: yay -S httpie
