@@ -29,7 +29,7 @@
 - import_tasks: software/gamemode.yml
 
 - import_tasks: software/yay.yml
-- import_tasks: software/insomnia.yml
+- import_tasks: software/httpie.yml
 - import_tasks: software/brave.yml
 - import_tasks: software/code.yml
 - import_tasks: software/steam.yml
