@@ -61,6 +61,7 @@
       alias rbt="reboot"
       alias ls="lsd"
       alias yup="yay --noconfirm"
+      alias yof="yup ; pof"
 #      source /usr/share/bash-completion/completions/aws
 
 - name: set login shell to zsh
