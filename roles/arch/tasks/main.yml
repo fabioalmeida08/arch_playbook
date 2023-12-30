@@ -25,12 +25,12 @@
 - import_tasks: software/docker.yml
 - import_tasks: software/docker-c.yml
 - import_tasks: software/lsd.yml
-- import_tasks: software/themes.yml
 - import_tasks: software/gamemode.yml
 
 - import_tasks: software/yay.yml
 - import_tasks: software/httpie.yml
 - import_tasks: software/brave.yml
+- import_tasks: software/themes.yml
 - import_tasks: software/code.yml
 - import_tasks: software/steam.yml
 - import_tasks: software/lutris.yml
