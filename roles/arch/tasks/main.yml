@@ -27,7 +27,7 @@
 - import_tasks: software/system/pulseaudio.yml
 - import_tasks: software/system/pavucontrol.yml
 - import_tasks: software/system/fonts.yml
-- import_tasks: software/dev/ripgrep.yml
+- import_tasks: software/system/ripgrep.yml
 
 ## networks tools like nmap mtr and bind-tools ##
 - import_tasks: software/network/network-tools.yml
