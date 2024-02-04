@@ -18,7 +18,6 @@
 - import_tasks: software/dev/lsd.yml
 - import_tasks: software/dev/oh-my-zsh.yml
 - import_tasks: software/dev/lazygit.yml
-- import_tasks: software/dev/lazydocker.yml
 - import_tasks: software/dev/tmux.yml
 
 ## system packages ##
@@ -40,6 +39,7 @@
 - import_tasks: software/system/yay.yml
 - import_tasks: software/dev/httpie.yml
 - import_tasks: software/dev/code.yml
+- import_tasks: software/dev/lazydocker.yml
 - import_tasks: software/system/themes.yml
 - import_tasks: software/gaming/steam.yml
 - import_tasks: software/gaming/lutris.yml
