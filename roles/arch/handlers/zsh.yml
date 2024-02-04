@@ -5,9 +5,7 @@
     dest: "{{ home }}/.oh-my-zsh/custom/themes/powerlevel10k"
   notify: "{{ item }}"
   loop:
-    - set powerlevel10k for zsh theme
     - source custom p10k config
-    - set aliases
     - set login shell to zsh
 
 - name: set powerlevel10k for zsh theme

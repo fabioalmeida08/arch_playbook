@@ -1,0 +1,5 @@
+- name: software | lazydocker | install package
+  tags: lazydocker, packages, workstation-packages
+  package:
+    name: lazydocker
+    state: latest

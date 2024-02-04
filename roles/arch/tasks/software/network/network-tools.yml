@@ -6,3 +6,5 @@
     - net-tools
     - bind-tools
     - traceroute
+    - mtr
+    - nmap
