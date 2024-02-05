@@ -6,3 +6,6 @@
   notify: "{{ item }}"
   loop:
     - set dotfiles
+
+- name: Flush handlers
+  meta: flush_handlers
