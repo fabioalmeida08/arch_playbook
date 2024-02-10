@@ -8,7 +8,6 @@
     - lightdm-gtk-greeter
     - nitrogen
     - picom
-    - dwm
     - xorg
     - arandr
     - dmenu
@@ -25,3 +24,9 @@
     - create default xdg dirs
     - create dir for wallpapers
     - unzip wallpapers
+
+- name: software | dwm | install package
+  become_user: "{{ user }}"
+  tags: dwm, packages, workstation-packages
+  shell:
+    cmd: yay -S dwm --noconfirm
