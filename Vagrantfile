@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     archlinux.vm.hostname = "localhost"
   end
 
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder "./", "/vagrant"
 
   # config.vm.provision "shell", path: "bootstrap.sh"
 
