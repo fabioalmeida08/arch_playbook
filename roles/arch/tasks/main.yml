@@ -19,6 +19,7 @@
 - import_tasks: software/dev/neovim.yml
 
 ## system packages ##
+- import_tasks: software/system/xorg.yml
 - import_tasks: software/system/bashtop.yml
 - import_tasks: software/system/unzip.yml
 - import_tasks: software/system/pulseaudio.yml
