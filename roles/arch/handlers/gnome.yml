@@ -20,7 +20,7 @@
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
   shell:
-    cmd: yay -S gnome-shell-extension-blur-my-shell gnome-shell-extension-gnome-ui-tune-git gnome-shell-extension-unblank-git bibata-cursor-theme gnome-shell-extension-clipboard-history gnome-shell-extension-pop-shell-git --noconfirm
+    cmd: yay -S gnome-shell-extension-blur-my-shell gnome-shell-extension-gnome-ui-tune-git gnome-shell-extension-unblank-git bibata-cursor-theme gnome-shell-extension-clipboard-history --noconfirm
 - name: enable shell extensions
   become_user: '{{ user }}'
   tags: shell extensions
