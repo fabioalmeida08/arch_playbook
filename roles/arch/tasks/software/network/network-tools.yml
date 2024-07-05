@@ -1,4 +1,4 @@
-- name: dnsmasq
+- name: network-tools
   package:
     name: "{{ item }}"
     state: latest
