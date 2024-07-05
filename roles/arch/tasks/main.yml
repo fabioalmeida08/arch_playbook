@@ -9,7 +9,7 @@
 - import_tasks: software/dev/vim.yml
 - import_tasks: software/dev/ssh.yml
 - import_tasks: software/dev/taskwarrior.yml
-# - import_tasks: software/dev/ranger.yml
+- import_tasks: software/dev/yazi.yml
 - import_tasks: software/dev/docker.yml
 - import_tasks: software/dev/docker-c.yml
 - import_tasks: software/dev/lsd.yml
