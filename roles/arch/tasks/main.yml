@@ -17,6 +17,7 @@
 - import_tasks: software/dev/lazygit.yml
 - import_tasks: software/dev/tmux.yml
 - import_tasks: software/dev/neovim.yml
+- import_tasks: software/dev/xclip.yml
 
 ## system packages ##
 - import_tasks: software/system/xorg.yml
