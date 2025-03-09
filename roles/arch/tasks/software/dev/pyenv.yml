@@ -1,0 +1,5 @@
+- name: software | pyenv | install package
+  tags: pyenv, packages, workstation-packages
+  package:
+    name: pyenv
+    state: latest
