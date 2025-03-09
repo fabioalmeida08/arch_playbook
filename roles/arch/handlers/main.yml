@@ -13,3 +13,4 @@
 - import_tasks: gnome.yml
 - import_tasks: locales.yml
 - import_tasks: stow.yml
+- import_tasks: plasma.yml
