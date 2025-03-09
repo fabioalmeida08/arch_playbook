@@ -20,6 +20,7 @@
 - import_tasks: software/dev/xclip.yml
 - import_tasks: software/dev/curlie.yml
 - import_tasks: software/dev/pyenv.yml
+- import_tasks: software/dev/aws-vault.yml
 
 ## system packages ##
 - import_tasks: software/system/xorg.yml
