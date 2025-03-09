@@ -20,7 +20,7 @@
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
   shell:
-    cmd: yay -S gnome-shell-extension-blur-my-shell gnome-shell-extension-gnome-ui-tune-git gnome-shell-extension-unblank-git bibata-cursor-theme gnome-shell-extension-clipboard-history --noconfirm
+    cmd: yay -S gnome-shell-extension-blur-my-shell bibata-cursor-theme gnome-shell-extension-clipboard-history --noconfirm
 - name: enable shell extensions
   become_user: '{{ user }}'
   tags: shell extensions
@@ -28,10 +28,8 @@
   loop:
     - appindicatorsupport@rgcjonas.gmail.com
     - blur-my-shell@aunetx
-    - unblank@sun.wxg@gmail.com
     - arch-update@RaphaelRochet
     - clipboard-history@alexsaveau.dev
-    - gnome-ui-tune@itstime.tech
 
 - name: set shortcuts
   become_user: '{{ user }}'
@@ -45,47 +43,6 @@
     regexp: '^output_folder='
     line: 'output_folder={{ home }}'
 
-- name: create the dir for gnome-extensions 
-  file:
-    path: '{{ home }}/.local/share/gnome-shell/extensions'
-    owner: '{{ user }}'
-    group: '{{ user }}'
-    state: directory
-    mode: '0764'
-
-
-- name: get gnome ui tune lateste release
-  uri:
-    url: https://api.github.com/repos/axxapy/gnome-ui-tune/releases/latest
-    return_content: yes
-  register: release_info
-
-- name: download gnome-ui-tune latest release
-  get_url:
-    url: "https://github.com/axxapy/gnome-ui-tune/archive/{{ release_info.json.tag_name }}.zip"
-    dest: "/tmp/gnome-ui-tune-latest.zip"
-    owner: "{{ user }}"
-    group: "{{ user }}"
-    mode: "0644"
-
-- name: extract gnome ui tune
-  unarchive:
-    src: '/tmp/gnome-ui-tune-latest.zip'
-    dest: '{{ home }}/.local/share/gnome-shell/extensions'
-    remote_src: yes
-    owner: '{{ user }}'
-    group: '{{ user }}'
-    mode: '0744'
-
-- name: extract version number
-  set_fact:
-    version_number: "{{ release_info.json.tag_name | regex_replace('[^0-9.]', '') }}"
-
-
-- name: rename gnome ui tune dir
-  command: mv "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune-{{ version_number }}" "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
-  args:
-    creates: "{{ home }}/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech"
 
 - name: install extension-manager
   become_user: "{{ user }}"
