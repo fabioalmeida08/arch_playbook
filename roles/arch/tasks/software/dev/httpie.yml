@@ -1,5 +1,0 @@
-- name: software | httpie | install package
-  tags: httpie, packages, workstation-packages
-  package:
-    name: httpie
-    state: latest
