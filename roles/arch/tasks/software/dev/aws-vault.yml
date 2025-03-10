@@ -1,5 +1,0 @@
-- name: software | aws-vault | install package
-  tags: aws-vault, packages, workstation-packages
-  package:
-    name: aws-vault
-    state: latest
