@@ -21,3 +21,7 @@
     path: "{{ home }}/.config/dconf/settings.dconf"
     regexp: "^command='bash'"
     line: "command='bash {{ home }}/.scripts/toggle-window-title.sh'"
+
+- name: create github ssh key
+  tags: ssh, config
+  command: "ssh-keygen -t ed25519 -f ~/.ssh/github_key -N ''"
