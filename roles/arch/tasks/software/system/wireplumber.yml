@@ -1,0 +1,5 @@
+- name: software | wireplumber | install package
+  tags: wireplumber, packages, workstation-packages
+  package:
+    name: wireplumber
+    state: latest
