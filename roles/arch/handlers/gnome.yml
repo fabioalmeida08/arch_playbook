@@ -10,12 +10,6 @@
   shell:
     cmd: yay -S gnome-shell-extension-arch-update --noconfirm
 
-- name: install gnome ui
-  become_user: '{{ user }}'
-  tags: github gnome ui improve
-  shell:
-    cmd: yay -S gnome-shell-extension-gnome-ui-tune-git --noconfirm
-
 - name: install custom extensions
   become_user: '{{ user }}'
   tags: pacman update indicator, packages, workstation-packages
