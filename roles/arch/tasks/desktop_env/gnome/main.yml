@@ -37,11 +37,11 @@
   notify:
     - add qt5ct desk env
     - enable gdm
-    - install pacman update indicator
+#    - install pacman update indicator
     - create default xdg dirs
     - install extension-manager
-    - install custom extensions
+#    - install custom extensions
     - create dir for wallpapers gnome
     - unzip wallpapers gnome
-    - enable shell extensions
+#    - enable shell extensions
     - set shortcuts
