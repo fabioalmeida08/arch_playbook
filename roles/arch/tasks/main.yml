@@ -51,7 +51,7 @@
 
 ## desktop env and dns config ##
 - import_tasks: software/dev/stow.yml
-# - import_tasks: desktop_env/gnome/main.yml
-# - import_tasks: software/system/themes.yml
-- import_tasks: desktop_env/kde-plasma/main.yml
+- import_tasks: desktop_env/gnome/main.yml
+- import_tasks: software/system/themes.yml
+# - import_tasks: desktop_env/kde-plasma/main.yml
 - import_tasks: software/system/dnsmasq.yml
