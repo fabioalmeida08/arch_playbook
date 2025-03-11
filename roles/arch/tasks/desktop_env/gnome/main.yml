@@ -37,7 +37,7 @@
   notify:
     - add qt5ct desk env
     - enable gdm
-   - install pacman update indicator
+    - install pacman update indicator
     - create default xdg dirs
     - install extension-manager
 #    - install custom extensions
