@@ -32,6 +32,7 @@
 - import_tasks: software/system/ripgrep.yml
 - import_tasks: software/system/rsync.yml
 - import_tasks: software/system/fzf.yml
+- import_tasks: software/system/7zip.yml
 
 ## networks tools like nmap mtr and bind-tools ##
 - import_tasks: software/network/network-tools.yml
