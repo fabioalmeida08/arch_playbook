@@ -3,4 +3,4 @@
   package:
     name: openssh
     state: latest
-  notify: create github ssh key
+  notify: Create GitHub SSH key

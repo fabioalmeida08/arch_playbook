@@ -22,6 +22,8 @@
     regexp: "^command='bash'"
     line: "command='bash {{ home }}/.scripts/toggle-window-title.sh'"
 
-- name: create github ssh key
+- name: Create GitHub SSH key
   tags: ssh, config
-  shell: sh -c "ssh-keygen -t ed25519 -f ~/.ssh/github_key -N ''"
+  ansible.builtin.command:
+    cmd: ssh-keygen -t ed25519 -f ~/.ssh/github_key -N ''
+    creates: ~/.ssh/github_key  # Só executa se o arquivo não existir
