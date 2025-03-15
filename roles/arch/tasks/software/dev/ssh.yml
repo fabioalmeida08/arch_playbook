@@ -3,4 +3,10 @@
   package:
     name: openssh
     state: latest
-  notify: Create GitHub SSH key
+
+- name: Create GitHub SSH key
+  tags: ssh, config
+  ansible.builtin.openssl_privatekey:
+    path: ~/.ssh/github_key
+    type: Ed25519
+    state: present
