@@ -7,4 +7,3 @@
     - aws-vault
     - aws-cli
     - terraform
-  notify: create github ssh key
