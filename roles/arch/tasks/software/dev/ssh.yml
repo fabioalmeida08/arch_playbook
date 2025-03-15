@@ -4,9 +4,8 @@
     name: openssh
     state: latest
 
-- name: Create GitHub SSH key
+- name: Create GitHub SSH key pair
   tags: ssh, config
-  ansible.builtin.openssl_privatekey:
-    path: ~/.ssh/github_key
-    type: Ed25519
-    state: present
+  ansible.builtin.command:
+    cmd: ssh-keygen -t ed25519 -f ~/.ssh/github_key -N ''
+    creates: ~/.ssh/github_key 
