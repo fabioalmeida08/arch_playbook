@@ -3,9 +3,4 @@
   package:
     name: openssh
     state: latest
-
-- name: Create GitHub SSH key pair
-  become_user: "{{ user }}"
-  tags: ssh, config
-  ansible.builtin.command:
-    cmd: ssh-keygen -t ed25519 -f ~/.ssh/github_key -N ''
+  notify: Create GitHub SSH key pair
