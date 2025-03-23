@@ -10,7 +10,7 @@
     - xdg-user-dirs
     - wireless_tools
     - wpa_supplicant
-    - gfvs
+    - gvfs
     - lightdm-gtk-greeter
   notify:
     - enable lightdm
