@@ -21,6 +21,7 @@
 - import_tasks: software/dev/curlie.yml
 - import_tasks: software/dev/uv.yml
 - import_tasks: software/dev/devops.yml
+- import_tasks: software/dev/tree.yml
 
 ## system packages ##
 - import_tasks: software/system/xorg.yml
