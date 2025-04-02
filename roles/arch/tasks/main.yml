@@ -35,6 +35,7 @@
 - import_tasks: software/system/fzf.yml
 - import_tasks: software/system/7zip.yml
 - import_tasks: software/system/flatpak.yml
+- import_tasks: software/system/ufw.yml
 
 ## networks tools like nmap mtr and bind-tools ##
 - import_tasks: software/network/network-tools.yml
