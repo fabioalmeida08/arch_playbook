@@ -17,3 +17,5 @@
     - create default xdg dirs
     - config lightdm-greeter
     - config lightdm-gtk-greeter
+    - extrat wallpapers
+    - set greeter img

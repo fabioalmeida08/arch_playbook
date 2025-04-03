@@ -21,3 +21,11 @@
       hide-user-image = true
       font-name = FireCode Nerd Font 10
       indicators = ~host;~spacer;~clock;~session;~layout;~power
+
+
+- name: extrat wallpapers
+  command: tar -xzf ~/arch_playbook/wallpapers.tar.gz
+  become: true
+
+- name: set greeter img
+  command: cp {{ home }}/arch_playbook/walls/firewatch-* /usr/share/pixmaps/~  
