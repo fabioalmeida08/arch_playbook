@@ -24,7 +24,7 @@
 
 
 - name: extrat wallpapers
-  command: tar -xzf ~/arch_playbook/wallpapers.tar.gz
+  command: "tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz"
   become: true
 
 - name: set greeter img
