@@ -28,4 +28,4 @@
   become: true
 
 - name: set greeter img
-  command: cp {{ home }}/arch_playbook/walls/firewatch-* /usr/share/pixmaps/~  
+  command: "cp {{ home }}/arch_playbook/walls/firewatch-* /usr/share/pixmaps/~"
