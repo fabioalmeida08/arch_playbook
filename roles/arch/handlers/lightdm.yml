@@ -23,9 +23,6 @@
       indicators = ~host;~spacer;~clock;~session;~layout;~power
 
 
-- name: extrat wallpapers
+- name: extract wallpapers
   command: "tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz"
   become: true
-
-- name: set greeter img
-  command: "cp {{ home }}/arch_playbook/walls/firewatch-*.jpg /usr/share/pixmaps/~"
