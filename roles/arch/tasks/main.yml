@@ -22,6 +22,7 @@
 - import_tasks: software/dev/uv.yml
 - import_tasks: software/dev/devops.yml
 - import_tasks: software/dev/tree.yml
+- import_tasks: software/dev/npm.yml
 
 ## system packages ##
 - import_tasks: software/system/xorg.yml
