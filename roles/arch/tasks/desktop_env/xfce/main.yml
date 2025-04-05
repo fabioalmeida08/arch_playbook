@@ -1,4 +1,4 @@
-- name: desktop env | xfce4 |
+- name: desktop env | xfce4
   tags: desktop env
   package:
     name: '{{ item }}'
@@ -12,6 +12,8 @@
     - wpa_supplicant
     - gvfs
     - lightdm-gtk-greeter
+    - bluez
+    - bluez-utils
   notify:
     - enable lightdm
     - create default xdg dirs
