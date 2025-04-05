@@ -3,7 +3,6 @@
     name: "{{ item }}"
     state: latest
   loop:
-    - pipewire-audio
     - bluez
     - bluez-utils
     - bluetui

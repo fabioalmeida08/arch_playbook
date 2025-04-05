@@ -6,3 +6,5 @@
   loop:
     - pipewire
     - wireplumber
+    - pipewire-pulse
+    - pipewire-audio
