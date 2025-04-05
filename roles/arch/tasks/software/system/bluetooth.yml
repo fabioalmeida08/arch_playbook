@@ -7,3 +7,4 @@
     - bluez
     - bluez-utils
     - bluetui
+  notify: enable bluetooth
