@@ -13,6 +13,7 @@
     - gvfs
     - lightdm-gtk-greeter
     - xdotool
+    - redshift
   notify:
     - enable lightdm
     - create default xdg dirs
