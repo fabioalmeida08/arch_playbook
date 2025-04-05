@@ -1,0 +1,9 @@
+- name: drivers |  bluetooth
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - pipewire-audio
+    - bluez
+    - bluez-utils
+    - bluetui

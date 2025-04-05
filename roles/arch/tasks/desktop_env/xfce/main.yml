@@ -12,8 +12,7 @@
     - wpa_supplicant
     - gvfs
     - lightdm-gtk-greeter
-    - bluez
-    - bluez-utils
+    - xdotool
   notify:
     - enable lightdm
     - create default xdg dirs
