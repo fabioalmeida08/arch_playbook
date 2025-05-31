@@ -59,8 +59,9 @@
 ## desktop env and dns config ##
 - import_tasks: software/dev/stow.yml
 
-### notebook config with bluetooth settings and xfce 
-- import_tasks: desktop_env/xfce/main.yml
+### notebook config with bluetooth settings and xfce or i3
+# - import_tasks: desktop_env/xfce/main.yml
+- import_tasks: desktop_env/i3/main.yml
 - import_tasks: software/system/bluetooth.yml
 
 ### desktop setting with gnome or kde plasma
