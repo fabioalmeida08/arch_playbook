@@ -1,31 +1,31 @@
-- name: desktop env | xfce4
+- name: desktop env | hyprland
   tags: desktop env
   package:
     name: '{{ item }}'
     state: latest
   loop:
-    - xorg
+    - hyprland
+    - hyprpicker
+    - hyprpaper
+    - hyperlock
+    - hyprland-themes
     - lightdm
     - lightdm-gtk-greeter
-    - i3-wm
-    - i3lock
-    - i3status
-    - i3blocks
     - dmenu
     - xdg-utils
     - xdg-user-dirs
     - wireless_tools
     - wpa_supplicant
     - gvfs
-    - xdotool
     - redshift
-    - feh
-    - lxappearance
-    - picom
+    - dunst
+    - qt5-wayland
+    - qt6-wayland
+    - xdg-desktop-portal-hyprland
+    - thunar
   notify:
     - enable lightdm
     - create default xdg dirs
     - config lightdm-greeter
     - config lightdm-gtk-greeter
     - extract wallpapers
-    - add qt5ct desk env
