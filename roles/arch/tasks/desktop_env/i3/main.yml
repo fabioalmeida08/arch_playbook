@@ -19,9 +19,18 @@
     - gvfs
     - xdotool
     - redshift
-    - feh
     - lxappearance
     - picom
+    - dunst
+    - materia-gtk-theme
+    - qt5ct
+    - qt6ct
+    - papirus-icon-theme
+    - nitrogen
+    - thunar
+    - ttf-font-awesome
+    - arandr
+    - network-manager-applet
   notify:
     - enable lightdm
     - create default xdg dirs
@@ -29,3 +38,4 @@
     - config lightdm-gtk-greeter
     - extract wallpapers
     - add qt5ct desk env
+    - set dotfiles
