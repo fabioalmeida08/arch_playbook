@@ -1,4 +1,4 @@
-- name: desktop env | xfce4
+- name: desktop env | i3wm
   tags: desktop env
   package:
     name: '{{ item }}'
