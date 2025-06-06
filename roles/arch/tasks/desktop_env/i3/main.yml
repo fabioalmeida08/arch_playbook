@@ -31,6 +31,7 @@
     - ttf-font-awesome
     - arandr
     - network-manager-applet
+    - evince
   notify:
     - enable lightdm
     - create default xdg dirs
