@@ -22,10 +22,13 @@
       font-name = FireCode Nerd Font 10
       indicators = ~host;~spacer;~clock;~session;~layout;~power
 
-- name: extract wallpapers
-  shell:
-    cmd: tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz ; mkdir -p {{ home }}/Wallpapers/ ; cp -r {{ home }}/arch_playbook/walls/* {{ home }}/Wallpapers/ ; rm -rf {{ home }}/arch_playbook/walls"          
-  become: true
+- name: Extract wallpapers
+  shell: |
+    tar -xzf {{ ansible_env.HOME }}/arch_playbook/wallpapers.tar.gz
+    mkdir -p {{ ansible_env.HOME }}/Wallpapers/
+    cp -r {{ ansible_env.HOME }}/arch_playbook/walls/* {{ ansible_env.HOME }}/Wallpapers/
+    rm -rf {{ ansible_env.HOME }}/arch_playbook/walls
+  become: false
 
 - name: set lightdm-gtk-greeter wallpaper
   command: "cp {{ home }}/Wallpapers/copland.png /usr/share/pixmaps/~"
