@@ -22,7 +22,7 @@
       font-name = FireCode Nerd Font 10
       indicators = ~host;~spacer;~clock;~session;~layout;~power
 
-- name: Extract wallpapers
+- name: extract wallpapers
   shell: |
     tar -xzf {{ ansible_env.HOME }}/arch_playbook/wallpapers.tar.gz
     mkdir -p {{ ansible_env.HOME }}/Wallpapers/
