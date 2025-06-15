@@ -23,10 +23,8 @@
       indicators = ~host;~spacer;~clock;~session;~layout;~power
 
 - name: extract wallpapers
-  command: "tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz ;
-           mkdir -p {{ home }}/Wallpapers/ ;
-           cp -r {{ home }}/arch_playbook/walls/* {{ home }}/Wallpapers/ ; 
-           rm -rf {{ home }}/arch_playbook/walls"
+  shell:
+    cmd: tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz ; mkdir -p {{ home }}/Wallpapers/ ; cp -r {{ home }}/arch_playbook/walls/* {{ home }}/Wallpapers/ ; rm -rf {{ home }}/arch_playbook/walls"          
   become: true
 
 - name: set lightdm-gtk-greeter wallpaper
