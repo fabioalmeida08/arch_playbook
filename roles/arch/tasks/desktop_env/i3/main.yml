@@ -9,8 +9,7 @@
     - lightdm-gtk-greeter
     - i3-wm
     - i3lock
-    - i3status
-    - i3blocks
+    - rofi
     - polybar
     - dmenu
     - xdg-utils
@@ -38,6 +37,7 @@
     - create default xdg dirs
     - config lightdm-greeter
     - config lightdm-gtk-greeter
-    - extract wallpapers
     - add qt5ct desk env
     - set dotfiles
+    - extract wallpapers
+    - set lightdm-gtk-greeter wallpaper
