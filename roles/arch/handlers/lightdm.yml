@@ -22,7 +22,13 @@
       font-name = FireCode Nerd Font 10
       indicators = ~host;~spacer;~clock;~session;~layout;~power
 
-
 - name: extract wallpapers
-  command: "tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz"
+  command: "tar -xzf {{ home }}/arch_playbook/wallpapers.tar.gz ;
+           mkdir -p {{ home }}/Wallpapers/ ;
+           cp -r {{ home }}/arch_playbook/walls/* {{ home }}/Wallpapers/ ; 
+           rm -rf {{ home }}/arch_playbook/walls"
   become: true
+
+- name: set lightdm-gtk-greeter wallpaper
+  command: "cp {{ home }}/Wallpapers/copland.png /usr/share/pixmaps/~"
+
