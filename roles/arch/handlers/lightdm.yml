@@ -28,7 +28,7 @@
     mkdir -p {{ ansible_env.HOME }}/Wallpapers/
     cp -r {{ ansible_env.HOME }}/arch_playbook/walls/* {{ ansible_env.HOME }}/Wallpapers/
     rm -rf {{ ansible_env.HOME }}/arch_playbook/walls
-  become: false
+  become_user: "{{ user }}"
 
 - name: set lightdm-gtk-greeter wallpaper
   command: "cp {{ home }}/Wallpapers/copland.png /usr/share/pixmaps/~"
