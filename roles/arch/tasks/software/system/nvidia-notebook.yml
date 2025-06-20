@@ -2,4 +2,4 @@
   become_user: "{{ user }}"
   tags: nvidia , drivers
   shell:
-    cmd: yay -S nvidia-390xx-dkms nvidia-390xx-utils nvidia-390xx-settings
+    cmd: yay -S nvidia-390xx-dkms nvidia-390xx-utils nvidia-390xx-settings --noconfirm
