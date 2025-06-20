@@ -1,7 +1,3 @@
-#--------------Drivers--------------------------
-- import_tasks: software/system/nvidia-drivers.yml
-- import_tasks: software/system/video-drivers.yml
-
 #--------------Dev packages-------------------
 - import_tasks: software/dev/zsh.yml
 - import_tasks: software/dev/bash-completion.yml
@@ -64,6 +60,8 @@
 # - import_tasks: desktop_env/hyprland/main.yml
 # - import_tasks: desktop_env/gnome/main.yml
 # - import_tasks: desktop_env/kde-plasma/main.yml
+
+#--------------Dotfiles-----------------------
 - import_tasks: software/dev/stow.yml
 
 #--------------Others packages/configs--------
@@ -71,3 +69,8 @@
 - import_tasks: software/system/bluetooth.yml
 - import_tasks: software/system/ufw.yml
 - import_tasks: software/system/dnsmasq.yml
+
+#--------------Video Drivers------------------
+- import_tasks: software/system/video-drivers.yml
+- import_tasks: software/system/nvidia-notebook.yml
+#- import_tasks: software/system/nvidia-drivers.yml
