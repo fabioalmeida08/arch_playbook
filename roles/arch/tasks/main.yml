@@ -55,7 +55,7 @@
 - import_tasks: software/gaming/gamemode.yml
 
 #--------------Desktop Evns-------------------
-- import_tasks: desktop_env/i3/main.yml
+- import_tasks: desktop_env/i3/main.yml //notebook
 # - import_tasks: desktop_env/xfce/main.yml
 # - import_tasks: desktop_env/hyprland/main.yml
 # - import_tasks: desktop_env/gnome/main.yml
@@ -66,11 +66,12 @@
 
 #--------------Others packages/configs--------
 - import_tasks: software/system/themes.yml
-- import_tasks: software/system/bluetooth.yml
 - import_tasks: software/system/ufw.yml
 - import_tasks: software/system/dnsmasq.yml
+- import_tasks: software/system/bluetooth.yml //notebook
+- import_tasks: software/system/envycontrol.yml //notebook
 
 #--------------Video Drivers------------------
-- import_tasks: software/system/video-drivers.yml
-- import_tasks: software/system/nvidia-notebook.yml
+- import_tasks: software/system/video-drivers.yml // notebook 
+- import_tasks: software/system/nvidia-notebook.yml //notebook
 #- import_tasks: software/system/nvidia-drivers.yml
