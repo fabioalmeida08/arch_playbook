@@ -9,6 +9,7 @@
     - lightdm-gtk-greeter
     - i3-wm
 #   - i3lock
+    - xss-lock
     - rofi
     - polybar
     - dmenu
@@ -42,3 +43,4 @@
     - set dotfiles
     - extract wallpapers
     - set lightdm-gtk-greeter wallpaper
+    - config lid behavior

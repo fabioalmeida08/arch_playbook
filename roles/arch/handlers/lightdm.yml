@@ -29,3 +29,24 @@
 - name: set lightdm-gtk-greeter wallpaper
   command: "cp {{ home }}/Wallpapers/copland.png /usr/share/pixmaps/~"
 
+- name: config lid behavior
+  hosts: localhost
+  # become: yes
+  tasks:
+    - name: Garante que HandleLidSwitch esteja definido como "lock"
+      lineinfile:
+        path: /etc/systemd/logind.conf
+        regexp: '^#?HandleLidSwitch='
+        line: 'HandleLidSwitch=lock'
+
+    - name: Garante que HandleLidSwitchDocked esteja definido como "lock"
+      lineinfile:
+        path: /etc/systemd/logind.conf
+        regexp: '^#?HandleLidSwitchDocked='
+        line: 'HandleLidSwitchDocked=lock'
+
+    - name: Garante que IdleAction esteja definido como "ignore"
+      lineinfile:
+        path: /etc/systemd/logind.conf
+        regexp: '^#?IdleAction='
+        line: 'IdleAction=ignore'
