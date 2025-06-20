@@ -69,7 +69,6 @@
 - import_tasks: software/system/ufw.yml
 - import_tasks: software/system/dnsmasq.yml
 - import_tasks: software/system/bluetooth.yml //notebook
-- import_tasks: software/system/envycontrol.yml //notebook
 
 #--------------Video Drivers------------------
 - import_tasks: software/system/video-drivers.yml // notebook 
