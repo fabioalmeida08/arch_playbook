@@ -56,6 +56,7 @@
 
 #--------------Desktop Evns-------------------
 - import_tasks: desktop_env/i3/main.yml
+- import_tasks: software/system/i3lock-color.yml
 # - import_tasks: desktop_env/xfce/main.yml
 # - import_tasks: desktop_env/hyprland/main.yml
 # - import_tasks: desktop_env/gnome/main.yml

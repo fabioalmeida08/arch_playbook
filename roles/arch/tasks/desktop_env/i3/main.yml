@@ -8,7 +8,7 @@
     - lightdm
     - lightdm-gtk-greeter
     - i3-wm
-    - i3lock
+#   - i3lock
     - rofi
     - polybar
     - dmenu
@@ -32,6 +32,7 @@
     - arandr
     - network-manager-applet
     - evince
+    - brightnessctl
   notify:
     - enable lightdm
     - create default xdg dirs
