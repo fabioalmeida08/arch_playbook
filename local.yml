@@ -36,13 +36,5 @@
     user: "{{ ansible_env.SUDO_USER }}"
     ipaddr: "{{ ansible_default_ipv4.address }}"
   become: true
-  vars_prompt:
-    - name: git_username
-      prompt: git config username
-      private: false
-
-    - name: git_email
-      prompt: git config email
-      private: false
   roles:
     - arch
