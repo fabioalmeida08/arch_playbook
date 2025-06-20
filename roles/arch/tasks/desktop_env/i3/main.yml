@@ -43,4 +43,7 @@
     - set dotfiles
     - extract wallpapers
     - set lightdm-gtk-greeter wallpaper
-    - config lid behavior
+    - config lid to block
+    - config lid to lock when docked
+    - config idle action to ignore
+
