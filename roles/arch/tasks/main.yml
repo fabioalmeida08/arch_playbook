@@ -55,7 +55,7 @@
 - import_tasks: software/gaming/gamemode.yml
 
 #--------------Desktop Evns-------------------
-- import_tasks: desktop_env/i3/main.yml //notebook
+- import_tasks: desktop_env/i3/main.yml
 # - import_tasks: desktop_env/xfce/main.yml
 # - import_tasks: desktop_env/hyprland/main.yml
 # - import_tasks: desktop_env/gnome/main.yml
