@@ -1,10 +1,14 @@
-- name: drivers | notebook gpu drivers
+- name: drivers | install GPU drivers
   package:
     name: "{{ item }}"
     state: latest
   loop:
-    - libva-intel-driver
     - mesa
-    - vulkan-intel
+    - libva-mesa-driver
+    - vulkan-mesa-layers
     - xorg-server
     - xorg-xinit
+    - xf86-video-nouveau
+    - libva-intel-driver
+    - vulkan-intel
+    - xf86-video-intel

@@ -73,5 +73,5 @@
 
 #--------------Video Drivers------------------
 - import_tasks: software/system/video-drivers.yml # notebook 
-- import_tasks: software/system/nvidia-notebook.yml # notebook
+#- import_tasks: software/system/nvidia-notebook.yml # notebook
 #- import_tasks: software/system/nvidia-drivers.yml
