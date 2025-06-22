@@ -45,7 +45,8 @@
 #--------------Aur packages-------------------
 - import_tasks: software/system/yay.yml
 - import_tasks: software/dev/code.yml
-- import_tasks: software/multimedia/brave.yml
+# - import_tasks: software/multimedia/brave.yml
+- import_tasks: software/multimedia/zen-browser.yml
 # - import_tasks: software/dev/lazydocker.yml
 
 #--------------Gaming-------------------------
