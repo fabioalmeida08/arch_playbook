@@ -18,9 +18,12 @@ check_requirements () {
 }
 
 run_playbook () {
-    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
     cd "$( dirname "$0" )"
     time ansible-playbook local.yml -K
+}
+
+install_yay () {
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 }
 sudo pacman -Syu
 check_requirements
