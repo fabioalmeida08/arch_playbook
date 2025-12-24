@@ -2,7 +2,7 @@
   connection: local
   become: true
   vars:
-    distro: "{{ ansible_distribution }}"
+    distro: "{{ ansible_facts['distribution'] }}"
 
   pre_tasks:
     - name: pre-run | check requirements
@@ -32,9 +32,9 @@
 - hosts: localhost
   tags: arch
   vars:
-    home: "/home/{{ ansible_env.SUDO_USER }}"
-    user: "{{ ansible_env.SUDO_USER }}"
-    ipaddr: "{{ ansible_default_ipv4.address }}"
+    home: "/home/{{ ansible_facts['env']['SUDO_USER'] }}"  # Correção aqui
+    user: "{{ ansible_facts['env']['SUDO_USER'] }}"
+    ipaddr: "{{ ansible_facts['default_ipv4']['address'] }}"
   become: true
   roles:
     - arch
