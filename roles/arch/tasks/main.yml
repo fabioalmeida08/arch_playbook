@@ -68,7 +68,7 @@
 - import_tasks: software/dev/stow.yml
 
 #--------------Others packages/configs--------
-# - import_tasks: software/system/themes.yml
+- import_tasks: software/system/themes.yml
 - import_tasks: software/system/ufw.yml
 - import_tasks: software/system/dnsmasq.yml
 - import_tasks: software/system/bluetooth.yml # notebook
