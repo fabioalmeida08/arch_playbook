@@ -27,7 +27,7 @@ install_yay () {
 }
 
 install_yay_pkgs () {
-    yay -S zen-browser code 
+    yay -S zen-browser code --noconfirm
 }
 
 sudo pacman -Syu
