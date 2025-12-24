@@ -26,8 +26,13 @@ install_yay () {
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd
 }
 
+install_yay_pkgs () {
+    yay -S zen-browser code 
+}
+
 sudo pacman -Syu
 check_requirements
 install_yay
+install_yay_pkgs 
 run_playbook
 

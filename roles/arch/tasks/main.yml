@@ -44,8 +44,8 @@
 - import_tasks: software/multimedia/qbittorrent.yml
 
 #--------------Aur packages-------------------
-- import_tasks: software/multimedia/zen-browser.yml
-- import_tasks: software/dev/code.yml
+# - import_tasks: software/multimedia/zen-browser.yml
+# - import_tasks: software/dev/code.yml
 # - import_tasks: software/system/yay.yml
 # - import_tasks: software/multimedia/brave.yml
 # - import_tasks: software/dev/lazydocker.yml
@@ -53,7 +53,7 @@
 #--------------Gaming-------------------------
 - import_tasks: software/gaming/steam.yml
 - import_tasks: software/gaming/lutris.yml
-- import_tasks: software/gaming/protonup-qt.yml
+# - import_tasks: software/gaming/protonup-qt.yml
 - import_tasks: software/gaming/gamemode.yml
 
 #--------------Desktop Evns-------------------
