@@ -25,7 +25,9 @@ run_playbook () {
 install_yay () {
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 }
+
 sudo pacman -Syu
 check_requirements
+install_yay
 run_playbook
 
