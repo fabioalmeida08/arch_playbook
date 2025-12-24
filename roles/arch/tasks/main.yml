@@ -1,5 +1,6 @@
 ---
 #--------------Dev packages-------------------
+- import_tasks: software/system/yay.yml
 - import_tasks: software/dev/zsh.yml
 - import_tasks: software/dev/bash-completion.yml
 - import_tasks: software/dev/bat.yml
@@ -44,7 +45,6 @@
 - import_tasks: software/multimedia/qbittorrent.yml
 
 #--------------Aur packages-------------------
-- import_tasks: software/system/yay.yml
 - import_tasks: software/dev/code.yml
 # - import_tasks: software/multimedia/brave.yml
 - import_tasks: software/multimedia/zen-browser.yml
