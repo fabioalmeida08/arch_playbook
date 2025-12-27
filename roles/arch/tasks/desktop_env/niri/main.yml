@@ -1,0 +1,37 @@
+- name: desktop env | niri
+  tags: desktop env
+  package:
+    name: '{{ item }}'
+    state: latest
+  loop:
+    - niri
+    - mako
+    - xwayland-satellite
+    - xdg-desktop-portal-gnome
+    - xdg-desktop-portal-gtk
+    - alacritty
+    - waybar
+    - fuzzel
+    - swaybg
+    - swayidle
+    - swaybg
+    - swaylock
+    - udiskie
+    - xdg-utils
+    - xdg-user-dirs
+    - wireless_tools
+    - wpa_supplicant
+    - redshift
+    - nwg-look
+    - lxappearance
+    - materia-gtk-theme
+    - adw-gtk-theme
+    - qt5ct
+    - qt6ct
+    - thunar
+    - ttf-font-awesome
+    - network-manager-applet
+    - evince
+    - brightnessctl
+  notify:
+    - create default xdg dirs
