@@ -16,3 +16,5 @@
 - import_tasks: plasma.yml
 - import_tasks: ufw.yml
 - import_tasks: bluetooth.yml
+- import_tasks: niri.yml
+- import_tasks: ly.yml
