@@ -33,6 +33,7 @@
     - network-manager-applet
     - evince
     - brightnessctl
+    - xorg-xwayland
     - ly
   notify:
     - create default xdg dirs
