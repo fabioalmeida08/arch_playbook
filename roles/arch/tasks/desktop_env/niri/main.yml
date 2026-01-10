@@ -6,6 +6,7 @@
   loop:
     - niri
     - swaync
+    - polkit-kde-agent
     # - mako
     - xwayland-satellite
     - xdg-desktop-portal-gnome
