@@ -33,7 +33,7 @@
     state: directory
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: "0755"               # 755 permite que você entre na pasta
+    mode: "0764"
 
 - name: unzip wallpapers to user home
   unarchive:
@@ -41,6 +41,6 @@
     dest: "{{ home }}/Wallpapers"
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: "0644"               # 644 é ideal para imagens
-    extra_opts: 
+    mode: "0764"
+    extra_opts:
       - --strip-components=1
