@@ -15,7 +15,6 @@
     - fuzzel
     - swaybg
     - swayidle
-    - swaybg
     - swaylock
     - udiskie
     - xdg-utils
@@ -40,3 +39,7 @@
     - create default xdg dirs
     - set defautl dark theme
     - config ly
+    - create user wallpapers dir
+    - unzip wallpapers to user home
+
+

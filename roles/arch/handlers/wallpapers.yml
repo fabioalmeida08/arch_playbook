@@ -10,19 +10,37 @@
     dest: "/usr/share/wallpapers"
     mode: "0744"
 
-- name: create dir for wallpapers gnome
+# - name: create dir for wallpapers gnome
+#   file:
+#     path: "{{ home }}/Wallpapers"
+#     state: directory
+#     owner: "{{ user }}"
+#     group: "{{ user }}"
+#     mode: "0764"
+#
+# - name: unzip wallpapers gnome
+#   unarchive:
+#     src: "wallpapers.tar.gz"
+#     dest: "{{ home }}/Wallpapers"
+#     owner: "{{ user }}"
+#     group: "{{ user }}"
+#     mode: "0764"
+#     extra_opts: --strip-components=1
+
+- name: create user wallpapers dir
   file:
     path: "{{ home }}/Wallpapers"
     state: directory
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: "0764"
+    mode: "0755"               # 755 permite que você entre na pasta
 
-- name: unzip wallpapers gnome
+- name: unzip wallpapers to user home
   unarchive:
     src: "wallpapers.tar.gz"
     dest: "{{ home }}/Wallpapers"
     owner: "{{ user }}"
     group: "{{ user }}"
-    mode: "0764"
-    extra_opts: --strip-components=1
+    mode: "0644"               # 644 é ideal para imagens
+    extra_opts: 
+      - --strip-components=1
