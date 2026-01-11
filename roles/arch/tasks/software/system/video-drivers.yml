@@ -5,10 +5,4 @@
   loop:
     - mesa
     - libva-mesa-driver
-    - vulkan-mesa-layers
-    - xorg-server
-    - xorg-xinit
-    - xf86-video-nouveau
-    - libva-intel-driver
     - vulkan-intel
-    - xf86-video-intel
