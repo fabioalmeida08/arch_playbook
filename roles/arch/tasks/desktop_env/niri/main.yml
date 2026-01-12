@@ -7,7 +7,7 @@
     - niri
     - swaync
     - polkit-kde-agent
-    # - mako
+    - wlsunset
     - xwayland-satellite
     - xdg-desktop-portal-gnome
     - xdg-desktop-portal-gtk
