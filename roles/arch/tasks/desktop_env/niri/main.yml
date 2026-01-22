@@ -36,6 +36,7 @@
     - brightnessctl
     - xorg-xwayland
     - ly
+    - wl-clipboard
   notify:
     - create default xdg dirs
     - set defautl dark theme
